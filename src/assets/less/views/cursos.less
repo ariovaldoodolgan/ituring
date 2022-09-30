@@ -1,0 +1,170 @@
+#courses {
+
+    .search-course {
+        background-color: #4B628B;
+        padding: 79px 0 100px;
+        position: relative;
+
+        .dots-left,
+        .dots-right {
+            height: 81.73px;
+            position: absolute;
+        }
+
+        .dots-left {
+            top: 31px;
+        }
+
+        .dots-right {
+            right: 0;
+            bottom: 96px;
+        }
+
+        .text {
+            display: grid;
+            text-align: center;
+
+            .title,
+            .subtitle {
+                font-weight: 400;
+                color: #FFFFFF;
+            }
+            
+            .title {
+                font-size: 36px;
+                text-transform: none;
+                line-height: 120%;
+            }
+
+            .subtitle {
+                font-size: 16px;
+                line-height: 137%;
+                opacity: .75;
+                margin-top: 10px;
+            }
+        }
+
+        .search {
+            justify-content: center;
+            margin-top: 38px;
+
+            .va-input-wrapper__field {
+                border-radius: 25px;
+                height: 48px;
+                width: 708px;
+                align-items: center;
+                border: none;
+
+                .va-input-wrapper__prepend-inner {
+                    display: block;
+                }
+
+                .search-button {
+                    height: 30px;
+                    width: 30px;
+                    line-height: 1;
+                    cursor: pointer;
+                    outline: none;
+                    box-sizing: border-box;
+                    border: none;
+                    display: inline-block;
+                    border-radius: 200rem;
+                    background: transparent;
+                    color: rgb(0, 0, 0);
+
+                    &:hover {
+                        background-color: rgb(214, 214, 214);;
+                    }
+                }
+
+                i {
+                    color: #999999;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .schools {
+            margin-top: 42px;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+
+            button {
+                max-width: 238px;
+                padding-left: 29px;
+                padding-right: 29px;
+                margin: 0 auto;
+
+                label {
+                    font-size: 14px;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .courses {
+        padding: 60px 0 100px;
+
+        .filters-section {
+
+            .text {
+                margin-bottom: 18px;
+
+                .title {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 120%;
+                    color: #0F1726;
+                }
+            }
+
+            .filters {
+                display: grid;
+                grid-template-columns: 28% 28% 28%;
+                justify-content: space-around;
+
+                .var-select {
+                    margin: 0 auto;
+                    max-height: 56px;
+                    background-color: #FFFFFF;
+                    border: 1px solid #CCCCCC;
+                    border-radius: 4px;
+
+                    &__wrap {
+                        padding: 10px 0;
+                    }
+
+                    &__placeholder {
+                        top: 35%;
+                    }
+
+                    &--placeholder-hint {
+                        top: 0!important;
+                    }
+
+                    &__select {
+                        font-size: 15px;
+                    }
+
+                    &__icon {
+                        padding: 0 0 0 10px;
+                    }
+                }
+            }
+        }
+
+        .cards {
+            margin-top: 50px;
+            justify-content: start;
+            margin-bottom: 40px;
+
+            #course-card {
+
+                &:not(:nth-child(3n)) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

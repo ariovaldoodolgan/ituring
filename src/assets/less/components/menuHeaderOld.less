@@ -1,0 +1,89 @@
+#menu-header-old {
+    height: 105px;
+    display: flex;
+    align-items: center;
+    background-color: #0f1726;
+
+    .container .row {
+
+        img {
+            max-width: 222px;
+        }
+
+        .actions {
+            display: grid;
+            grid-template-columns: 94% 0;
+            align-items: center;
+
+            .menu-options {
+                right: 0;
+
+                ul {
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        position: relative;
+
+                        a {
+                            list-style: none;
+                            font-size: 14px;
+                            color: #fff;
+                            transition: color .3s;
+                            min-width: max-content;
+                            cursor: pointer;
+                        }
+
+                        &:not(:last-child) {
+                            margin-right: 42px;
+                        }
+
+                        &.active {
+                            &:after {
+                                width: 100%;
+                            }
+                        }
+                        
+                        &:hover {
+                            &:after {
+                                width: 100%;
+                            }
+                            a {
+                                color: #33CDAC;
+                                text-decoration: none;
+                            }
+                        }
+
+                        &:after {
+                            content: "";
+                            width: 0%;
+                            height: 5px;
+                            background: #33CDAC;
+                            position: absolute;
+                            left: 0;
+                            bottom: -2.8rem;
+                            transition: width .3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .button-old {
+
+        background-color: #33cdac;
+        border: 2px solid #33cdac;
+        transition: all .3s;
+        cursor: pointer;
+        border-radius: 30px;
+        padding: 10px 32px;
+
+        label {
+            cursor: inherit;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
