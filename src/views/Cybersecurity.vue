@@ -412,7 +412,7 @@
 </template>
 
 <script lang="ts">
-import { ref, onBeforeMount, onMounted } from 'vue';
+import { ref, onBeforeMount } from 'vue';
 import Tag from "../components/Tag.vue";
 import Card from "../components/Card.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
@@ -558,28 +558,6 @@ export default {
         onBeforeMount(() => {
             isMobile.value = general.isMobileResolution;
         });
-
-        onMounted(() => {
-            let overlay = document.getElementById("ementa-ciberseguranca-para-negocios-3db86845bc80c9978351");
-
-            overlay.addEventListener("click", (event) => {
-
-                if (event.target.id == "ementa-ciberseguranca-para-negocios-3db86845bc80c9978351") {
-                    overlay.style.display = "none";
-
-                } else if (event.target.id == "rd-button-ko4k0d2p") {
-                    let name = document.getElementById('rd-text_field-kyzwc99i').value;
-                    let email = document.getElementById('rd-email_field-kyzwc99j').value;
-                    let phone = document.getElementById('rd-phone_field-kyzwc99k').value;
-                    
-                    if (name != '' && email != '' && phone.length >= 16) {
-                        overlay.style.display = "none";
-                    }
-                }
-            })
-
-            GTMViewItem();
-        })
 
         const isOpenCourseModules = ref([false, false, false, false]);
         let collapsesModules = [
