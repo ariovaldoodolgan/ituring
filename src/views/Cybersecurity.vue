@@ -2,7 +2,7 @@
     <div id="cybersecurity">
         <Moustache>
             <template #info>
-                <span>Você é uma empresa e quer adquirir nossos produtos para seus colaboradores? <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5511916221666" target="_system">Fale com nosso consultor.</a></span>
+                <span>Você é uma empresa e quer adquirir nossos produtos para seus colaboradores? <a>Fale com nosso consultor.</a></span>
             </template>
         </Moustache>
 
@@ -24,7 +24,7 @@
                                 <label>Inscreva-se</label>
                             </button>
                         </a>
-                        <button @click="openModalEmenta()" id="outline-button" :class="{ medium: !isMobile }">
+                        <button id="outline-button" :class="{ medium: !isMobile }">
                             <label>
                                 <i class="ri-honour-line"></i>
                                 Ver conteúdo
@@ -110,7 +110,7 @@
                     <p>
                         Conheça os detalhes que esta certificação internacional vai trazer para você!
                     </p>
-                    <button id="primary-button" @click="openModalEmenta()">
+                    <button id="primary-button">
                         <label><i class="ri-honour-line"></i>Baixar ementa</label>
                     </button>
                 </div>
@@ -367,7 +367,7 @@
                                 <div class="row button">
                                     <div class="col">
                                         <a>
-                                            <button @click="goToCheckout()" id="primary-button" :class="{ 'large': !isMobile, 'medium': !isMobile }">
+                                            <button id="primary-button" :class="{ 'large': !isMobile, 'medium': !isMobile }">
                                                 <label>Começar agora</label>
                                             </button>
                                         </a>
@@ -407,9 +407,8 @@
         
         <MenuFooter />
 
-        <ituringRights />
+        <ITuringRights />
     </div>
-    <Modal v-show="showModalEmenta" :modalId="'ementa-ciberseguranca-para-negocios-3db86845bc80c9978351'"/>
 </template>
 
 <script lang="ts">
@@ -418,13 +417,12 @@ import Tag from "../components/Tag.vue";
 import Card from "../components/Card.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
 import MenuFooter from "../components/MenuFooter.vue";
-import ituringRights from "../components/ituringRights.vue";
+import ITuringRights from "../components/ITuringRights.vue";
 import ContactExpert from "../components/ContactExpert.vue";
 import CarouselStudent from "../components/CarouselStudent.vue";
 import CarouselTeacher from "../components/CarouselTeacher.vue";
 import Moustache from "../components/Moustache.vue";
 import { generalStore } from '../stores/general';
-import Modal from "../components/Modal.vue";
 import B2BCard from "../components/B2BCard.vue";
 import Countdown from "../components/Countdown.vue";
 import { PushDataLayer } from '../common/utils/GTMEvents';
@@ -432,14 +430,13 @@ import { PushDataLayer } from '../common/utils/GTMEvents';
 export default {
     components: { 
         Tag, Card, MenuHeaderOld,
-        MenuFooter, ituringRights, ContactExpert, 
+        MenuFooter, ITuringRights, ContactExpert, 
         CarouselStudent, CarouselTeacher, Moustache,
-        Modal, B2BCard, Countdown
+        B2BCard, Countdown
     },
     setup() {
         const isMobile = ref(false);
         const general = generalStore();
-        const showModalEmenta = ref(false);
         let launchDate = new Date('30 September 2022');
 
         let teacherList = [
@@ -449,7 +446,7 @@ export default {
                 name: 'Prof. Tal Zarsky (PhD)',
                 observation1: 'Vice Reitor - University of Haifa/ISRAEL',
                 observation2: 'J.S.D. pela Columbia University/EUA',
-                linkedin: 'https://www.linkedin.com/in/tal-zarsky-a34157/'
+                linkedin: null
             },
             {
                 id: 2,
@@ -457,7 +454,7 @@ export default {
                 name: 'Dr. Orr Dunkelman (PhD)',
                 observation1: 'Professor -  University of Haifa/ISRAEL',
                 observation2: 'PhD em Ciência da Computação - Technion/ISRAEL',
-                linkedin: 'https://www.linkedin.com/in/orr-dunkelman-022681/'
+                linkedin: null
             },
             {
                 id: 3,
@@ -465,7 +462,7 @@ export default {
                 name: 'Guilherme Dutra',
                 observation1: 'Cybersecurity and Privacy Director - PwC Brasil',
                 observation2: '',
-                linkedin: 'https://www.linkedin.com/in/guilherme-ddutra/'
+                linkedin: null
             },
             {
                 id: 4,
@@ -473,7 +470,7 @@ export default {
                 name: 'Prof. Amnon Reichman (PhD)',
                 observation1: 'Diretor -  University of Haifa/ISRAEL',
                 observation2: 'LL.M. pela University of California, Berkeley',
-                linkedin: 'https://www.linkedin.com/in/amnon-reichman-61503ba/'
+                linkedin: null
             },
             {
                 id: 5,
@@ -481,7 +478,7 @@ export default {
                 name: 'Prof. Karni Chagal (PhD)',
                 observation1: 'Professor -  University of Haifa/ISRAEL',
                 observation2: 'PhD pela University of Ottawa, Canadá',
-                linkedin: 'https://www.linkedin.com/in/karni-chagal-feferkorn-a18360a/'
+                linkedin: null
             },
             {
                 id: 6,
@@ -489,7 +486,7 @@ export default {
                 name: 'Larissa Escobar',
                 observation1: 'Cybersecurity and Privacy Director na PwC Brasil',
                 observation2: 'MBA em Gestão da Informação pela USP',
-                linkedin: 'https://www.linkedin.com/in/larissa-escobar-mba-cism-a54264/'
+                linkedin: null
             },
             {
                 id: 7,
@@ -505,7 +502,7 @@ export default {
                 name: 'Maressa Juricic',
                 observation1: 'Cybersecurity and Privacy Partner na PwC Brasil',
                 observation2: 'Executive MBA na Vanderbilt University',
-                linkedin: 'https://www.linkedin.com/in/maressa-juricic-74a8288/'
+                linkedin: null
             },
             {
                 id: 9,
@@ -513,7 +510,7 @@ export default {
                 name: 'Ezequiel Souza',
                 observation1: 'Cybersecurity & Risk Management Sr. Na PwC Brasil',
                 observation2: 'MBA em Governança de TI na USP',
-                linkedin: 'https://www.linkedin.com/in/ezequielsouza/'
+                linkedin: null
             }
         ];
 
@@ -707,17 +704,6 @@ export default {
             controls: false
         }
 
-        function openModalEmenta() {
-            document.getElementById("ementa-ciberseguranca-para-negocios-3db86845bc80c9978351")
-                .style.display = "block";
-            showModalEmenta.value = true;
-        }
-
-        function goToCheckout() {
-            GTMAddToCart();
-            window.location.href ="https://checkout.ituring.com.br/3361f5c1-e5a2-4368-b3dd-766c00daa69e";
-        }
-
         function GTMViewItem() {
 
             window.dataLayer.push({ ecommerce: null });
@@ -758,12 +744,9 @@ export default {
             vimeoOptions,
             logoCompanies,
             isMobile,
-            showModalEmenta,
-            openModalEmenta,
             launchDate,
             teacherList,
-            studentList,
-            goToCheckout
+            studentList
         }
     }
 }

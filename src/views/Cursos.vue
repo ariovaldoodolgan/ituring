@@ -2,7 +2,7 @@
     <div id="courses">
         <Moustache>
             <template #info>
-                <span>Você é uma empresa e quer adquirir nossos produtos para seus colaboradores? <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5511916221666" target="_system">Fale com nosso consultor.</a></span>
+                <span>Você é uma empresa e quer adquirir nossos produtos para seus colaboradores? <a>Fale com nosso consultor.</a></span>
             </template>
         </Moustache>
 
@@ -72,7 +72,7 @@
 
         <MenuFooter />
 
-        <ituringRights />
+        <ITuringRights />
     </div>
 </template>
 
@@ -82,13 +82,13 @@ import { generalStore } from '../stores/general';
 import Moustache from "../components/Moustache.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
 import MenuFooter from "../components/MenuFooter.vue";
-import ituringRights from "../components/ituringRights.vue";
+import ITuringRights from "../components/ITuringRights.vue";
 import CourseCard from "../components/CourseCard.vue";
 
 export default {
     components: { 
         Moustache, MenuHeaderOld,
-        MenuFooter, ituringRights,
+        MenuFooter, ITuringRights,
         CourseCard
     },
     setup() {

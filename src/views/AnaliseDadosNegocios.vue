@@ -2,7 +2,7 @@
     <div id="cybersecurity">
         <Moustache>
             <template #info>
-                <span>Você é uma empresa e quer adquirir nossos produtos para seus colaboradores? <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5511916221666" target="_system">Fale com nosso consultor.</a></span>
+                <span>Você é uma empresa e quer adquirir nossos produtos para seus colaboradores? <a>Fale com nosso consultor.</a></span>
             </template>
         </Moustache>
 
@@ -24,7 +24,7 @@
                                 <label>Inscreva-se</label>
                             </button>
                         </a>
-                        <button @click="openModalEmenta()" id="outline-button" :class="{ medium: !isMobile }">
+                        <button id="outline-button" :class="{ medium: !isMobile }">
                             <label>
                                 <i class="ri-honour-line"></i>
                                 Ver conteúdo
@@ -106,7 +106,7 @@
                     <p>
                         Conheça os detalhes que esta certificação internacional vai trazer para você!
                     </p>
-                    <button id="primary-button" @click="openModalEmenta()">
+                    <button id="primary-button">
                         <label><i class="ri-honour-line"></i>Baixar ementa</label>
                     </button>
                 </div>
@@ -354,7 +354,7 @@
 
                                 <div class="row button">
                                     <div class="col">
-                                        <a href="https://checkout.ituring.com.br/3361f5c1-e5a2-4368-b3dd-766c00daa69e">
+                                        <a>
                                             <button id="primary-button" :class="{ 'large': !isMobile, 'medium': !isMobile }">
                                                 <label>Começar agora</label>
                                             </button>
@@ -395,9 +395,8 @@
         
         <MenuFooter />
 
-        <ituringRights />
+        <ITuringRights />
     </div>
-    <Modal v-show="showModalEmenta"/>
 </template>
 
 <script lang="ts">
@@ -406,27 +405,25 @@ import Tag from "../components/Tag.vue";
 import Card from "../components/Card.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
 import MenuFooter from "../components/MenuFooter.vue";
-import ituringRights from '../components/ITuringRights.vue';
+import ITuringRights from '../components/ITuringRights.vue';
 import ContactExpert from "../components/ContactExpert.vue";
 import CarouselStudent from "../components/CarouselStudent.vue";
 import CarouselTeacher from "../components/CarouselTeacher.vue";
 import Moustache from "../components/Moustache.vue";
 import { generalStore } from '../stores/general';
-import Modal from "../components/Modal.vue";
 import B2BCard from "../components/B2BCard.vue";
 import Countdown from "../components/Countdown.vue";
 
 export default {
     components: { 
         Tag, Card, MenuHeaderOld,
-        MenuFooter, ituringRights, ContactExpert, 
+        MenuFooter, ITuringRights, ContactExpert, 
         CarouselStudent, CarouselTeacher, Moustache,
-        Modal, B2BCard, Countdown
+        B2BCard, Countdown
     },
     setup() {
         const isMobile = ref(false);
         const general = generalStore();
-        const showModalEmenta = ref(false);
         let launchDate = new Date('30 September 2022');
 
         onBeforeMount(() => {
@@ -576,12 +573,6 @@ export default {
             controls: false
         }
 
-        function openModalEmenta() {
-            document.getElementById("ementa-ciberseguranca-para-negocios-3db86845bc80c9978351")
-                .style.display = "block";
-            showModalEmenta.value = true;
-        }
-
         return {
             isOpenCourseModules,
             collapsesModules,
@@ -589,8 +580,6 @@ export default {
             vimeoOptions,
             logoCompanies,
             isMobile,
-            showModalEmenta,
-            openModalEmenta,
             launchDate
         }
     }

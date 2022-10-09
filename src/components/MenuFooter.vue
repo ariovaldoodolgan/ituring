@@ -11,16 +11,16 @@
                     <ul>
                         <li>Sobre a ituring</li>
                         <li>
-                            <a href="https://ituring.com.br/quem-somos/">Sobre</a>
+                            <a>Sobre</a>
                         </li>
                         <li>
-                            <a href="https://conteudo.ituring.com.br/para-empresas" target="_blank">ituring para empresas</a>
+                            <a>ITuring para empresas</a>
                         </li>
                         <li>
-                            <a href="https://ituring.com.br/parceiros/">Parceiros</a>
+                            <a>Parceiros</a>
                         </li>
                         <li>
-                            <a href="https://tech.ituring.com.br/" target="_blank">Blog</a>
+                            <a>Blog</a>
                         </li>
                     </ul>
                 </div>
@@ -28,22 +28,22 @@
                     <ul>
                         <li>Suporte</li>
                         <li>
-                            <a href="https://ituring.com.br/contato/">Contato</a>
+                            <a>Contato</a>
                         </li>
                         <li>
-                            <a href="https://ituring.com.br/faq/">Ajuda e FAQ</a>    
+                            <a>Ajuda e FAQ</a>    
                         </li>
                         <li class="social-media">
-                            <a href="https://www.instagram.com/ituringoficial/" target="_blank">
+                            <a>
                                 <i class="ri-instagram-fill"></i>
                             </a>
-                            <a href="https://www.youtube.com/channel/UCMDhRg7000iWgGAtXu7kQaw" target="_blank">
+                            <a>
                                 <i class="ri-youtube-fill"></i>
                             </a>
-                            <a href="https://www.linkedin.com/company/75098351" target="_blank">
+                            <a>
                                 <i class="ri-linkedin-box-fill"></i>
                             </a>
-                            <a href="https://www.facebook.com/ituringoficial" target="_blank">
+                            <a>
                                 <i class="ri-facebook-circle-fill"></i>
                             </a>
                         </li>

@@ -2,7 +2,7 @@
     <div id="aprenda-programar">
         <Moustache>
             <template #info>
-                <span>Você é uma empresa e quer adquirir nossos produtos para seus colaboradores? <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5511916221666" target="_system">Fale com nosso consultor.</a></span>
+                <span>Você é uma empresa e quer adquirir nossos produtos para seus colaboradores? <a>Fale com nosso consultor.</a></span>
             </template>
         </Moustache>
 
@@ -36,8 +36,7 @@
                         <div class="text">
                             <strong>GRUPO DISCORD</strong>
                             <h3>Aprenda a Programar</h3>
-                            <a href="#" onclick="window.open('https:\/\/discord.gg/uUabFdMpfy', '_blank')">acesse
-                            aqui</a>
+                            <a>acesse aqui</a>
                         </div>
                     </div>
                 </div>
@@ -322,7 +321,7 @@
 
                                 <div class="row button">
                                     <div class="col">
-                                        <button @click="openModal()" id="primary-button" :class="{ 'large': !isMobile, 'medium': !isMobile }">
+                                        <button id="primary-button" :class="{ 'large': !isMobile, 'medium': !isMobile }">
                                             <label>Avise-me</label>
                                         </button>
                                     </div>
@@ -361,9 +360,8 @@
         
         <MenuFooter />
 
-        <ituringRights />
+        <ITuringRights />
     </div>
-    <Modal v-show="showModalInscricao" :modalId="'avise-me-curso-gratuito-dev-outubro-0a96c5c2574ca1753d2f'"/>
 </template>
 
 <script lang="ts">
@@ -372,13 +370,12 @@ import Tag from "../components/Tag.vue";
 import Card from "../components/Card.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
 import MenuFooter from "../components/MenuFooter.vue";
-import ituringRights from "../components/ituringRights.vue";
+import ITuringRights from "../components/ITuringRights.vue";
 import ContactExpert from "../components/ContactExpert.vue";
 import CarouselStudent from "../components/CarouselStudent.vue";
 import CarouselTeacher from "../components/CarouselTeacher.vue";
 import Moustache from "../components/Moustache.vue";
 import { generalStore } from '../stores/general';
-import Modal from "../components/Modal.vue";
 import B2BCard from "../components/B2BCard.vue";
 import Countdown from "../components/Countdown.vue";
 import { PushDataLayer } from '../common/utils/GTMEvents';
@@ -386,14 +383,13 @@ import { PushDataLayer } from '../common/utils/GTMEvents';
 export default {
     components: { 
         Tag, Card, MenuHeaderOld,
-        MenuFooter, ituringRights, ContactExpert, 
+        MenuFooter, ITuringRights, ContactExpert, 
         CarouselStudent, CarouselTeacher, Moustache,
-        Modal, B2BCard, Countdown
+        B2BCard, Countdown
     },
     setup() {
         const isMobile = ref(false);
         const general = generalStore();
-        const showModalInscricao = ref(false);
 
         let launchDate = new Date('3 October 2022');
 
@@ -404,7 +400,7 @@ export default {
                 name: 'Jô Souza',
                 observation1: 'Consultora de desenvolvimento - ThoughtWorks',
                 observation2: null,
-                linkedin: 'https://www.linkedin.com/in/joselinecorreasouza/'
+                linkedin: ''
             },
             {
                 id: 2,
@@ -412,7 +408,7 @@ export default {
                 name: 'Tiago Sestari',
                 observation1: 'Engenheiro de Integração - ESW',
                 observation2: null,
-                linkedin: 'https://www.linkedin.com/in/tiago-sestari-7b4a1554/'
+                linkedin: ''
             },
             {
                 id: 3,
@@ -420,7 +416,7 @@ export default {
                 name: 'Thales Carvalho',
                 observation1: 'Head de Produto e Engenharia - ituring',
                 observation2: null,
-                linkedin: 'https://www.linkedin.com/in/thalesmcarvalho/'
+                linkedin: ''
             }
         ];
 
@@ -611,13 +607,6 @@ export default {
             controls: false
         }
 
-        function openModal() {
-            document.getElementById("avise-me-curso-gratuito-dev-outubro-0a96c5c2574ca1753d2f")
-                .style.display = "block";
-            
-            showModalInscricao.value = true;
-        }
-
         function GTMViewItem() {
 
             window.dataLayer.push({ ecommerce: null });
@@ -643,8 +632,6 @@ export default {
             vimeoOptions,
             logoCompanies,
             isMobile,
-            showModalInscricao,
-            openModal,
             launchDate,
             teacherList,
             studentList
