@@ -120,7 +120,7 @@
         <div class="course-method container">
             <div class="row">
                 <div class="course-method-intro col">
-                    <span class="title">Conheça o método ilura</span>
+                    <span class="title">Conheça o método ituring</span>
                     <p class="subtitle">
                         Conhecimento direto da fonte com referências globais em cibersegurança.
                     </p>
@@ -157,7 +157,7 @@
                         <div class="method-description">
                             <span>Certificado com reconhecimento internacional</span>
                             <p>
-                                Ao concluir o curso e os projetos, você receberá a certificação ilura assinada 
+                                Ao concluir o curso e os projetos, você receberá a certificação ituring assinada 
                                 pelos parceiros PwC Brasil e University of Haifa/ISRAEL.
                             </p>
                         </div>
@@ -220,7 +220,7 @@
                     <i class="ri-honour-line"></i>
                     <span class="title">Certificação Internacional</span>
                     <p class="description">
-                        Curso de 4 meses com certificação ilura assinada pela PwC Brasil e Universidade de Haifa/ISRAEL
+                        Curso de 4 meses com certificação ituring assinada pela PwC Brasil e Universidade de Haifa/ISRAEL
                     </p>
                 </div>
             </div>
@@ -277,7 +277,7 @@
                 <div class="col">
                     <span class="title">Nossos alunos estão nessas empresas</span>
                     <p class="subtitle">
-                        Estudantes do ilura estão transformando negócios que transformam o mercado no Brasil e no mundo.
+                        Estudantes do ituring estão transformando negócios que transformam o mercado no Brasil e no mundo.
                     </p>
                     <div class="companies">
                         <img v-for="(logo, index) in logoCompanies" :key="index" :src="logo.img" :alt="logo.description">
@@ -299,7 +299,7 @@
                         </template>
                         <template #description>
                             <p class="subtitle">
-                                Quer conhecer um pouco sobre quem já passou pelo ilura?
+                                Quer conhecer um pouco sobre quem já passou pelo ituring?
                                 Veja o depoimento dos nossos alunos.
                             </p>
                         </template>
@@ -407,7 +407,7 @@
         
         <MenuFooter />
 
-        <iluraRights />
+        <ituringRights />
     </div>
     <Modal v-show="showModalEmenta" :modalId="'ementa-ciberseguranca-para-negocios-3db86845bc80c9978351'"/>
 </template>
@@ -418,7 +418,7 @@ import Tag from "../components/Tag.vue";
 import Card from "../components/Card.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
 import MenuFooter from "../components/MenuFooter.vue";
-import iluraRights from "../components/iluraRights.vue";
+import ituringRights from "../components/ituringRights.vue";
 import ContactExpert from "../components/ContactExpert.vue";
 import CarouselStudent from "../components/CarouselStudent.vue";
 import CarouselTeacher from "../components/CarouselTeacher.vue";
@@ -432,7 +432,7 @@ import { PushDataLayer } from '../common/utils/GTMEvents';
 export default {
     components: { 
         Tag, Card, MenuHeaderOld,
-        MenuFooter, iluraRights, ContactExpert, 
+        MenuFooter, ituringRights, ContactExpert, 
         CarouselStudent, CarouselTeacher, Moustache,
         Modal, B2BCard, Countdown
     },
@@ -715,7 +715,7 @@ export default {
 
         function goToCheckout() {
             GTMAddToCart();
-            window.location.href ="https://checkout.ilura.com.br/3361f5c1-e5a2-4368-b3dd-766c00daa69e";
+            window.location.href ="https://checkout.ituring.com.br/3361f5c1-e5a2-4368-b3dd-766c00daa69e";
         }
 
         function GTMViewItem() {
@@ -724,7 +724,7 @@ export default {
             const item = {
                 item_id: 'CYB9449',
                 item_name: 'Cibersegurança para Negócios',
-                item_brand: 'ilura',
+                item_brand: 'ituring',
                 item_category: 'Cybersecurity',
                 item_variant: '4 meses',
                 index: 1,
@@ -741,7 +741,7 @@ export default {
             const item = {
                 item_id: 'CYB9449',
                 item_name: 'Cibersegurança para Negócios',
-                item_brand: 'ilura',
+                item_brand: 'ituring',
                 item_category: 'Cybersecurity',
                 index: 1,
                 price: 1990.00,

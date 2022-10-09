@@ -116,7 +116,7 @@
         <div class="course-method container">
             <div class="row">
                 <div class="course-method-intro col">
-                    <span class="title">Conheça o método ilura</span>
+                    <span class="title">Conheça o método ituring</span>
                     <p class="subtitle">
                         Conhecimento direto da fonte com referências globais em cibersegurança.
                     </p>
@@ -153,7 +153,7 @@
                         <div class="method-description">
                             <span>Certificado com reconhecimento internacional</span>
                             <p>
-                                Ao concluir o curso e os projetos, você receberá a certificação ilura assinada 
+                                Ao concluir o curso e os projetos, você receberá a certificação ituring assinada 
                                 pelos parceiros PwC Brasil e University of Haifa/ISRAEL.
                             </p>
                         </div>
@@ -216,7 +216,7 @@
                     <i class="ri-honour-line"></i>
                     <span class="title">Certificação Internacional</span>
                     <p class="description">
-                        Curso de 4 meses com certificação ilura assinada pela PwC Brasil e Universidade de Haifa/ISRAEL
+                        Curso de 4 meses com certificação ituring assinada pela PwC Brasil e Universidade de Haifa/ISRAEL
                     </p>
                 </div>
             </div>
@@ -270,7 +270,7 @@
                 <div class="col">
                     <span class="title">Nossos alunos estão nessas empresas</span>
                     <p class="subtitle">
-                        Estudantes do ilura estão transformando negócios que transformam o mercado no Brasil e no mundo.
+                        Estudantes do ituring estão transformando negócios que transformam o mercado no Brasil e no mundo.
                     </p>
                     <div class="companies">
                         <img v-for="(logo, index) in logoCompanies" :key="index" :src="logo.img" :alt="logo.description">
@@ -288,7 +288,7 @@
                 <div class="col">
                     <span class="title">O que dizem nossos alunos</span>
                     <p class="subtitle">
-                        Quer conhecer um pouco sobre quem já passou pelo ilura?
+                        Quer conhecer um pouco sobre quem já passou pelo ituring?
                         Veja o depoimento dos nossos alunos.
                     </p>
                     <CarouselStudent />
@@ -354,7 +354,7 @@
 
                                 <div class="row button">
                                     <div class="col">
-                                        <a href="https://checkout.ilura.com.br/3361f5c1-e5a2-4368-b3dd-766c00daa69e">
+                                        <a href="https://checkout.ituring.com.br/3361f5c1-e5a2-4368-b3dd-766c00daa69e">
                                             <button id="primary-button" :class="{ 'large': !isMobile, 'medium': !isMobile }">
                                                 <label>Começar agora</label>
                                             </button>
@@ -395,7 +395,7 @@
         
         <MenuFooter />
 
-        <iluraRights />
+        <ituringRights />
     </div>
     <Modal v-show="showModalEmenta"/>
 </template>
@@ -406,7 +406,7 @@ import Tag from "../components/Tag.vue";
 import Card from "../components/Card.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
 import MenuFooter from "../components/MenuFooter.vue";
-import iluraRights from "../components/iluraRights.vue";
+import ituringRights from "../components/ituringRights.vue";
 import ContactExpert from "../components/ContactExpert.vue";
 import CarouselStudent from "../components/CarouselStudent.vue";
 import CarouselTeacher from "../components/CarouselTeacher.vue";
@@ -419,7 +419,7 @@ import Countdown from "../components/Countdown.vue";
 export default {
     components: { 
         Tag, Card, MenuHeaderOld,
-        MenuFooter, iluraRights, ContactExpert, 
+        MenuFooter, ituringRights, ContactExpert, 
         CarouselStudent, CarouselTeacher, Moustache,
         Modal, B2BCard, Countdown
     },

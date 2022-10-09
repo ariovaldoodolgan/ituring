@@ -1,9 +1,9 @@
 <template>
-    <div id="ilura-rights">
+    <div id="ituring-rights">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <span class="col">Todos os direitos reservados a ilura. <i class="ri-copyright-line"></i> {{year}} ilura</span>
+                    <span class="col">Todos os direitos reservados a ituring. <i class="ri-copyright-line"></i> {{year}} ituring</span>
                 </div>
             </div>
         </div>

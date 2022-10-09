@@ -10,11 +10,9 @@
                     <span class="carousel__item-name">{{ teacher.name }}</span>
                     <span class="carousel__item-observation1">{{ teacher.observation1 }}</span>
                     <span class="carousel__item-observation2">{{ teacher.observation2 }}</span>
-                    <a v-show="teacher.linkedin != null" :href="teacher.linkedin" target="_blank">
-                        <button id="circular-button">
-                            <i class="ri-linkedin-fill"></i>
-                        </button>
-                    </a>
+                    <button id="circular-button">
+                        <i class="ri-linkedin-fill"></i>
+                    </button>
                 </div>
             </Slide>
 

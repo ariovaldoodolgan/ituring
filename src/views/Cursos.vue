@@ -72,7 +72,7 @@
 
         <MenuFooter />
 
-        <iluraRights />
+        <ituringRights />
     </div>
 </template>
 
@@ -82,13 +82,13 @@ import { generalStore } from '../stores/general';
 import Moustache from "../components/Moustache.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
 import MenuFooter from "../components/MenuFooter.vue";
-import iluraRights from "../components/iluraRights.vue";
+import ituringRights from "../components/ituringRights.vue";
 import CourseCard from "../components/CourseCard.vue";
 
 export default {
     components: { 
         Moustache, MenuHeaderOld,
-        MenuFooter, iluraRights,
+        MenuFooter, ituringRights,
         CourseCard
     },
     setup() {

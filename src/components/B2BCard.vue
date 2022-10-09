@@ -10,11 +10,9 @@
                     </span>
                 </div>
                 <div class="col button">
-                    <a href="https://conteudo.ilura.com.br/para-empresas" target="_system">
-                        <button id="primary-button">
-                            <label>Falar com especialistas</label>
-                        </button>
-                    </a>
+                    <button id="primary-button">
+                        <label>Falar com especialistas</label>
+                    </button>
                 </div>
             </div>
         </div>

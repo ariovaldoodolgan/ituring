@@ -115,7 +115,7 @@
         <div class="course-method container">
             <div class="row">
                 <div class="course-method-intro col">
-                    <span class="title">Conheça o método ilura</span>
+                    <span class="title">Conheça o método ituring</span>
                     <p class="subtitle">
                         Aprendizado na prática com apoio de especialistas durante todo o percurso.
                     </p>
@@ -151,7 +151,7 @@
                             <span>Certificado para valorizar o currículo</span>
                             <p>
                                 Ao concluir o curso e as tarefas obrigatórias, você receberá um certificado 
-                                emitido pelo ilura para comprovar sua experiência e impulsionar sua carreira.
+                                emitido pelo ituring para comprovar sua experiência e impulsionar sua carreira.
                             </p>
                         </div>
                     </li>
@@ -218,7 +218,7 @@
                     <span class="title">Online e ao vivo</span>
                     <p class="description">
                         Curso de cinco dias, com apoio constante de profissionais experientes e uma comunidade 
-                        para tirar dúvidas diretamente com professores do ilura.
+                        para tirar dúvidas diretamente com professores do ituring.
                     </p>
                 </div>
             </div>
@@ -245,7 +245,7 @@
                 <div class="col">
                     <span class="title">Nossos alunos estão nessas empresas</span>
                     <p class="subtitle">
-                        Estudantes do ilura estão transformando negócios que transformam o mercado no Brasil e no mundo.
+                        Estudantes do ituring estão transformando negócios que transformam o mercado no Brasil e no mundo.
                     </p>
                     <div class="companies">
                         <img v-for="(logo, index) in logoCompanies" :key="index" :src="logo.img" :alt="logo.description">
@@ -267,7 +267,7 @@
                         </template>
                         <template #description>
                             <p class="subtitle">
-                                Quer conhecer um pouco sobre quem já passou pelo ilura?
+                                Quer conhecer um pouco sobre quem já passou pelo ituring?
                                 Veja o depoimento dos nossos alunos.
                             </p>
                         </template>
@@ -292,7 +292,7 @@
                                 <ul class="details">
                                     <li>Imersão de cinco dias no universo da programação, com aulas online e ao vivo</li>
                                     <li>Gravação disponível para assistir depois se não puder participar no horário da aula</li>
-                                    <li>Certificado emitido pelo ilura</li>
+                                    <li>Certificado emitido pelo ituring</li>
                                     <li>Contato direto com professores e alunos para tirar dúvidas e conversar sobre carreira</li>
                                     <li>Curso 100% online</li>
                                 </ul>
@@ -361,7 +361,7 @@
         
         <MenuFooter />
 
-        <iluraRights />
+        <ituringRights />
     </div>
     <Modal v-show="showModalInscricao" :modalId="'avise-me-curso-gratuito-dev-outubro-0a96c5c2574ca1753d2f'"/>
 </template>
@@ -372,7 +372,7 @@ import Tag from "../components/Tag.vue";
 import Card from "../components/Card.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
 import MenuFooter from "../components/MenuFooter.vue";
-import iluraRights from "../components/iluraRights.vue";
+import ituringRights from "../components/ituringRights.vue";
 import ContactExpert from "../components/ContactExpert.vue";
 import CarouselStudent from "../components/CarouselStudent.vue";
 import CarouselTeacher from "../components/CarouselTeacher.vue";
@@ -386,7 +386,7 @@ import { PushDataLayer } from '../common/utils/GTMEvents';
 export default {
     components: { 
         Tag, Card, MenuHeaderOld,
-        MenuFooter, iluraRights, ContactExpert, 
+        MenuFooter, ituringRights, ContactExpert, 
         CarouselStudent, CarouselTeacher, Moustache,
         Modal, B2BCard, Countdown
     },
@@ -418,7 +418,7 @@ export default {
                 id: 3,
                 photoName: new URL('../assets/images/thales-carvalho.png', import.meta.url),
                 name: 'Thales Carvalho',
-                observation1: 'Head de Produto e Engenharia - ilura',
+                observation1: 'Head de Produto e Engenharia - ituring',
                 observation2: null,
                 linkedin: 'https://www.linkedin.com/in/thalesmcarvalho/'
             }
@@ -442,7 +442,7 @@ export default {
                 name: 'Mariana Minotti',
                 companyRole: null,
                 course: null,
-                review: `Agradeço de coração à toda a equipe do ilura por disponibilizar esse conteúdo de qualidade 
+                review: `Agradeço de coração à toda a equipe do ituring por disponibilizar esse conteúdo de qualidade 
                 de forma gratuita. Já havia tentado aprender programação, mas fazer isso sozinha é um caminho um pouco 
                 mais tortuoso. Ter voltado a estudar com as atividades propostas e as aulas pelo zoom foi muito 
                 importante para eu poder mostrar pra mim mesma o quanto é possível aprender programação, mesmo sem ter 
@@ -456,7 +456,7 @@ export default {
                 course: null,
                 review: `Esse curso foi uma abertura imensa para perceber que programação era realmente para mim. 
                 Passados os 5 dias, meu entusiasmo pela programação aumentou muito, e de fato é essa profissão que 
-                quero para minha vida. Obrigada, equipe do ilura, certamente, quando eu estiver ingressada na 
+                quero para minha vida. Obrigada, equipe do ituring, certamente, quando eu estiver ingressada na 
                 carreira, lembrarei de que foram vocês que me deram esse empurrão para começar!\"`
             },
             {
@@ -625,7 +625,7 @@ export default {
             const item = {
                 item_id: 'DEV2901',
                 item_name: 'Aprenda a Programar',
-                item_brand: 'ilura',
+                item_brand: 'ituring',
                 item_category: 'Developers',
                 item_variant: '5 dias',
                 index: 1,

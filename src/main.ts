@@ -5,7 +5,7 @@ import VueSmoothScroll from 'vue3-smooth-scroll';
 import 'vuestic-ui/css';
 import vueVimeoPlayer from 'vue-vimeo-player';
 import { createGtm } from '@gtm-support/vue-gtm';
-import { Select, Option } from '@varlet/ui'
+import { Select, Option } from '@varlet/ui';
 import '@varlet/ui/es/style.js';
 
 import App from './App.vue';
@@ -22,18 +22,18 @@ app.use(Option);
 app.use(createVuestic());
 
 app.use(VueSmoothScroll, {
-    duration: 780,
-    updateHistory: false
-  });
+	duration: 780,
+	updateHistory: false
+});
 app.use(vueVimeoPlayer);
 
 app.use(
-  createGtm({
-      id: 'GTM-MKSSWPT',
-      defer: false,
-      compatibility: false,
-      loadScript: true,
-  })
+	createGtm({
+		id: 'GTM-MKSSWPT',
+		defer: false,
+		compatibility: false,
+		loadScript: true,
+	})
 );
 
 app.mount('#app');
