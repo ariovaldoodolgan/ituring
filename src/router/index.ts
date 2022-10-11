@@ -4,6 +4,11 @@ const router = createRouter({
 	history: createWebHistory(),
 	routes: [
 		{
+			path: '/',
+			name: 'A escola de negócios e tecnologia que você procura',
+			component: () => import('@/views/Home.vue')
+		},
+		{
 			path: '/analise-dados-negocios',
 			name: 'Análise de Dados para Negócios',
 			component: () => import('@/views/AnaliseDadosNegocios.vue')
@@ -63,7 +68,7 @@ const router = createRouter({
 
 
 router.beforeEach((to: any, from, next) => {
-	document.title = `ituring | ${to.name}`;
+	document.title = `ITuring | ${to.name}`;
 	next();
 });
 
