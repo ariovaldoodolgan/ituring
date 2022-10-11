@@ -32,18 +32,56 @@
 
 		<section id="partners">
 			<div class="container">
-				
+				<ul class="row">
+					<li v-for="(item, index) in partnerLogoList" :key="index">
+						<img :src="item.logo" :alt="item.name">
+					</li>
+				</ul>
 			</div>
 		</section>
+
+		<MenuFooter />
+
+		<ITuringRights />
   	</div>
 </template>
 
 <script lang="ts">
-import MenuHeader from "../components/MenuHeader.vue";
+import MenuHeader from '../components/MenuHeader.vue';
+import MenuFooter from '../components/MenuFooter.vue';
+import ITuringRights from '../components/ITuringRights.vue';
 
 export default {
   components: {
-    MenuHeader,
+    MenuHeader, MenuFooter, ITuringRights
   },
+  setup() {
+	  const partnerLogoList = [
+		  {
+			  logo: new URL('../assets/images/microsoft-gray.png', import.meta.url),
+			  name: 'Microsoft'
+		  },
+		  {
+			  logo: new URL('../assets/images/loft-gray.png', import.meta.url),
+			  name: 'Loft'
+		  },
+		  {
+			  logo: new URL('../assets/images/refactory-gray.png', import.meta.url),
+			  name: 'Refactory'
+		  },
+		  {
+			  logo: new URL('../assets/images/aws-gray.png', import.meta.url),
+			  name: 'AWS'
+		  },
+		  {
+			  logo: new URL('../assets/images/cisco-gray.png', import.meta.url),
+			  name: 'Cisco'
+		  }
+	  ];
+	
+	return {
+		partnerLogoList
+	};
+  }
 };
 </script>
