@@ -52,3 +52,81 @@
         }
     }
 }
+
+.course-information {
+    padding: 65px;
+
+    .title {
+        font-size: 20px;
+        line-height: 120%;
+        font-weight: 700;
+        color: #0F1726;
+        display: flex;
+        justify-content: center;
+        text-transform: none;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        line-height: 137%;
+        color: #828282;
+        max-width: 55%;
+        text-align: center;
+        display: flex;
+        margin: 35px auto 0;
+    }
+
+    .video {
+        display: flex;
+        margin-top: 80px;
+        align-items: center;
+
+        &-area {
+
+            div:nth-child(1) {
+
+                iframe {
+                    max-width: 520px;
+                    max-height: 293px;
+                    border-radius: 18px;
+                }
+            }
+
+            .dots {
+                position: absolute;
+                bottom: -8%;
+                left: 477px;
+                z-index: -1;
+            }
+        }
+
+        .description {
+            margin-left: 115px;
+            max-width: 400px;
+
+            span {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 120%;
+                color: #0F1726;
+            }
+
+            p {
+                margin-top: 17px;
+                font-size: 18px;
+                line-height: 137%;
+                color: #4F4F4F;
+            }
+
+            button {
+                margin-top: 24px
+            }
+        }
+    }
+}
+
+.dots-divider {
+    justify-content: center;
+    display: flex;
+    margin-top: 60px;
+}

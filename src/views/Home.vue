@@ -40,6 +40,42 @@
 			</div>
 		</section>
 
+		<div class="course-information container">
+            <div class="row">
+                <div class="col">
+                    <span class="title">Comece a programar do zero</span>
+                    <p class="subtitle">
+                        Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills 
+						you need to help land a high-paying tech job.
+                    </p>
+                </div>
+            </div>
+            <div class="video row">
+                <div class="video-area" :class="{ 'col-6': !isMobile }">
+                    <vimeo-player ref="player" :video-id="752661375" :options="vimeoOptions"/>
+                    <img class="dots" src="@/assets/images/dots.png" alt="">
+                </div>
+                <div class="description" :class="{ 'col-6': !isMobile }">
+                    <span>Aulas avançadas</span>
+                    <p>
+                        Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills 
+						you need to help land a high-paying tech job.
+                    </p>
+                    <button id="primary-button">
+                        <label><i class="ri-honour-line"></i>Conhecer mais</label>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+		<div class="dots-divider">
+            <img src="@/assets/images/dots_2.png" alt="">
+        </div>
+
+		<StudentsCompany />
+
+		<ContactExpert />
+
 		<MenuFooter />
 
 		<ITuringRights />
@@ -47,12 +83,15 @@
 </template>
 
 <script lang="ts">
+import StudentsCompany from '../components/StudentsCompany.vue';
+import ContactExpert from '../components/ContactExpert.vue';
 import MenuHeader from '../components/MenuHeader.vue';
 import MenuFooter from '../components/MenuFooter.vue';
 import ITuringRights from '../components/ITuringRights.vue';
 
 export default {
   components: {
+	StudentsCompany, ContactExpert,
     MenuHeader, MenuFooter, ITuringRights
   },
   setup() {
