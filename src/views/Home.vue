@@ -68,6 +68,44 @@
             </div>
         </div>
 
+		<section id="results" class="container">
+			<div class="row row-title">
+				<span class="title">Nossos resultados</span>
+			</div>
+
+			<div class="row row-card">
+				<Card class="developer">
+					<template #header>
+                        <label><i class="ri-honour-line"></i>Desenvolvedores</label>
+                    </template>
+
+					<template #info>
+                        4532 desenvolvedores com mais de 90% de satisfação
+                    </template>
+				</Card>
+
+				<Card class="beginner">
+					<template #header>
+                        <label><i class="ri-honour-line"></i>Iniciantes</label>
+                    </template>
+
+					<template #info>
+                        4532 desenvolvedores com mais de 90% de satisfação
+                    </template>
+				</Card>
+
+				<Card class="company">
+					<template #header>
+                        <label><i class="ri-honour-line"></i>Empresas</label>
+                    </template>
+
+					<template #info>
+                        4532 desenvolvedores com mais de 90% de satisfação
+                    </template>
+				</Card>
+			</div>
+		</section>
+
 		<div class="dots-divider">
             <img src="@/assets/images/dots_2.png" alt="">
         </div>
@@ -83,6 +121,7 @@
 </template>
 
 <script lang="ts">
+import Card from '../components/Card.vue';
 import StudentsCompany from '../components/StudentsCompany.vue';
 import ContactExpert from '../components/ContactExpert.vue';
 import MenuHeader from '../components/MenuHeader.vue';
@@ -91,7 +130,7 @@ import ITuringRights from '../components/ITuringRights.vue';
 
 export default {
   components: {
-	StudentsCompany, ContactExpert,
+	Card, StudentsCompany, ContactExpert,
     MenuHeader, MenuFooter, ITuringRights
   },
   setup() {

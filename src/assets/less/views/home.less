@@ -130,3 +130,79 @@
     display: flex;
     margin-top: 60px;
 }
+
+#results {
+
+    .row-title {
+
+        justify-content: center;
+        margin: 100px 0 50px;
+
+        .title {
+            text-transform: none;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 120%;
+            color: #0F1726;
+        }
+    }
+
+    .row-card {
+        display: grid;
+        grid-template-columns: 31% 31% 31%;
+        justify-content: space-between;
+
+        #card {
+
+            &.developer {
+
+                header {
+
+                    label,i {
+                        color: #E2B93B;
+                    }
+                }
+            }
+
+            &.beginner {
+
+                header {
+
+                    label,i {
+                        color: #2F80ED;
+                    }
+                }
+            }
+
+            &.company {
+
+                header {
+
+                    label,i {
+                        color: #27AE60;
+                    }
+
+                    label {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 120%;
+                    }
+                }
+            }
+
+            &.developer,
+            &.beginner,
+            &.company {
+
+                header {
+
+                    label {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 120%;
+                    }
+                }
+            }
+        }
+    }
+}
