@@ -76,7 +76,7 @@
 			<div class="row row-card">
 				<Card class="developer">
 					<template #header>
-                        <label><i class="ri-honour-line"></i>Desenvolvedores</label>
+                        <label><i class="ri-code-box-line"></i>Desenvolvedores</label>
                     </template>
 
 					<template #info>
@@ -96,11 +96,63 @@
 
 				<Card class="company">
 					<template #header>
-                        <label><i class="ri-honour-line"></i>Empresas</label>
+                        <label><i class="ri-building-4-line"></i>Empresas</label>
                     </template>
 
 					<template #info>
                         4532 desenvolvedores com mais de 90% de satisfação
+                    </template>
+				</Card>
+			</div>
+		</section>
+
+		<section id="schools" class="container">
+			<div class="row row-title">
+				<span class="title">Nossas escolas</span>
+			</div>
+
+			<div class="row row-card">
+				<Card class="programming">
+					<template #header>
+                        <label><i class="ri-code-box-line"></i>Programação</label>
+                    </template>
+
+					<template #info>
+                        Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
+						to help land a high-paying tech job. 
+                    </template>
+				</Card>
+
+				<Card class="business">
+					<template #header>
+                        <label><i class="ri-honour-line"></i>Negócios</label>
+                    </template>
+
+					<template #info>
+                        Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
+						to help land a high-paying tech job. 
+                    </template>
+				</Card>
+
+				<Card class="data">
+					<template #header>
+                        <label><i class="ri-building-4-line"></i>Ciência de Dados</label>
+                    </template>
+
+					<template #info>
+                        Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
+						to help land a high-paying tech job. 
+                    </template>
+				</Card>
+
+				<Card class="cybersecurity">
+					<template #header>
+                        <label><i class="ri-building-4-line"></i>Cibersegurança</label>
+                    </template>
+
+					<template #info>
+                        Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
+						to help land a high-paying tech job. 
                     </template>
 				</Card>
 			</div>
