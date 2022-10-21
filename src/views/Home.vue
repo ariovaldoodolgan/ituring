@@ -106,6 +106,67 @@
 			</div>
 		</section>
 
+		<div class="dots-divider">
+            <img src="@/assets/images/dots_2.png" alt="">
+        </div>
+
+		<section class="hability container">
+			<div class="row row-title">
+				<div class="col">
+                    <span class="title">As habilidades digitais mais requisitadas no mercado</span>
+                    <p class="subtitle">
+                        Da Programação a Análise de Dados, desenvolva as habilidades e torne-se um talento digital.
+                    </p>
+                </div>
+			</div>
+
+			<div class="content row">
+				<div class="text col">
+					<div class="row experience">
+						<div class="img">
+							<img src="@/assets/images/rectangle-green.png" alt="sinalizador verde">
+						</div>
+						<div class="text">
+							<span class="title">Experiência prática</span>
+							<p class="description">
+								Em todos os cursos do ITuring os alunos desenvolvem projetos práticos para viver desafios 
+								reais do mercado e ganhar experiência.
+							</p>
+						</div>
+					</div>
+
+					<div class="row support">
+						<div class="img">
+							<img src="@/assets/images/rectangle-red.png" alt="sinalizador vermelho">
+						</div>
+						<div class="text">
+							<span class="title">Suporte de especialistas</span>
+							<p class="description">
+								Além de instrutores que são profissionais de mercado, todos os projetos têm revisão de 
+								especialistas da área que trazem feedbacks e dicas práticas. 
+							</p>
+						</div>
+					</div>
+
+					<div class="row knowledge">
+						<div class="img">
+							<img src="@/assets/images/rectangle-blue.png" alt="sinalizador azul">
+						</div>
+						<div class="text">
+							<span class="title">Conhecimento direto da fonte.</span>
+							<p class="description">
+								Conte com instrutores que atuam nas empresas mais conceituadas do Brasil.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="image col">
+					<img src="@/assets/images/hability.png" alt="">
+				</div>
+			</div>
+		</section>
+
 		<section id="schools" class="container">
 			<div class="row row-title">
 				<span class="title">Nossas escolas</span>
@@ -114,46 +175,70 @@
 			<div class="row row-card">
 				<Card class="programming">
 					<template #header>
-                        <label><i class="ri-code-box-line"></i>Programação</label>
+                        <label><i class="ri-terminal-box-line"></i>Programação</label>
                     </template>
 
 					<template #info>
                         Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
 						to help land a high-paying tech job. 
                     </template>
+
+					<template #btn>
+						<button id="primary-button">
+							<label><i class="ri-honour-line"></i>Acessar escola de programação</label>
+						</button>
+					</template>
 				</Card>
 
 				<Card class="business">
 					<template #header>
-                        <label><i class="ri-honour-line"></i>Negócios</label>
+                        <label><i class="ri-book-line"></i>Negócios</label>
                     </template>
 
 					<template #info>
                         Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
 						to help land a high-paying tech job. 
                     </template>
+
+					<template #btn>
+						<button id="primary-button">
+							<label><i class="ri-honour-line"></i>Acessar escola de negócios</label>
+						</button>
+					</template>
 				</Card>
 
 				<Card class="data">
 					<template #header>
-                        <label><i class="ri-building-4-line"></i>Ciência de Dados</label>
+                        <label><i class="ri-database-2-line"></i>Ciência de Dados</label>
                     </template>
 
 					<template #info>
                         Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
 						to help land a high-paying tech job. 
                     </template>
+
+					<template #btn>
+						<button id="primary-button">
+							<label><i class="ri-honour-line"></i>Acessar escola de dados</label>
+						</button>
+					</template>
 				</Card>
 
 				<Card class="cybersecurity">
 					<template #header>
-                        <label><i class="ri-building-4-line"></i>Cibersegurança</label>
+                        <label><i class="ri-rotate-lock-line"></i>Cibersegurança</label>
                     </template>
 
 					<template #info>
                         Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
 						to help land a high-paying tech job. 
                     </template>
+
+					<template #btn>
+						<button id="primary-button">
+							<label><i class="ri-honour-line"></i>Acessar escola de cibersegurança</label>
+						</button>
+					</template>
 				</Card>
 			</div>
 		</section>
