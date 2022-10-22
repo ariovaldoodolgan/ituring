@@ -1,0 +1,44 @@
+#menu-header {
+    height: 126px;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+
+    .container .row {
+
+        .actions {
+            display: grid;
+            grid-template-columns: 76% 0;
+            align-items: center;
+
+            .menu-options {
+                right: 0;
+
+                ul {
+                    padding: 0;
+                    display: flex;
+
+                    li {
+                        list-style: none;
+                        font-size: 18px;
+                        line-height: 24.5px;
+                        color: #4F4F4F;
+
+
+                        &:not(:last-child) {
+                            margin-right: 42px;
+                        }
+                    }
+                }
+            }
+
+            .button {
+
+                label {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

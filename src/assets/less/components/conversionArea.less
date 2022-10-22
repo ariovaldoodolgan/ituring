@@ -1,0 +1,178 @@
+.conversion-area {
+
+    .title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
+        color: #0F1726;
+        display: grid;
+        justify-content: center;
+        margin-bottom: 35px;
+        text-transform: none;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        line-height: 137.8%;
+        color: #828282;
+        max-width: 40%;
+        text-align: center;
+        margin: 0 auto 50px;
+    }
+
+    .card-info {
+        background-color: #0F1726;
+        border-radius: 16px;
+        padding: 40px;
+        justify-content: center;
+
+        .first-session {
+
+            .title {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 120%;
+                color: #FFFFFF;
+                display: flex;
+                justify-content: start;
+            }
+
+            .details {
+                padding-left: 25px;
+
+                li {
+                    font-size: 16px;
+                    line-height: 188%;
+                    letter-spacing: -0.015em;
+                    color: #FFFFFF;
+                    list-style: disc;
+                    font-family: "Montserrat";
+                    max-width: 90%;
+                }
+            }
+
+            .observation {
+                margin-top: 34px;
+
+                span {
+                    font-size: 16px;
+                    line-height: 150%;
+                    letter-spacing: -0.015em;
+                    color: #33CDAC;
+                    font-family: "Montserrat";
+                    display: flex;
+                    justify-content: start;
+
+                    i {
+                        font-size: 20px;
+                        margin-right: 10px;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        .divider {
+            height: 106px;
+            transform: translateY(100%);
+        }
+
+        .second-session {
+
+            .next-class {
+
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: 20% 24% 27% 34%;
+                    justify-content: center;
+                    padding-right: 0;
+                    margin-left: 7%;
+    
+                    .grid-item {
+                        font-family: "Montserrat";
+                        text-align: center;
+                        color: #2F80ED;
+                        font-size: 12px;
+                        line-height: 24px;
+    
+                        &.time-value {
+                            font-weight: 700;
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                img {
+                    margin-left: 29px;
+                }
+
+                .date {
+                    display: grid;
+                    color: #2F80ED;
+                    padding-left: 26px;
+
+                    &-label {
+                        font-family: "Montserrat";
+                        font-size: 12px;
+                        line-height: 24px;
+                    }
+
+                    &-value {
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 150%;
+                letter-spacing: -0.015em;
+                color: #E0E0E0;
+                margin-top: 28px;
+                max-width: 70%;
+                margin-left: 8%;
+            }
+
+            .price {
+                margin-top: 24px;
+                margin-left: 5%;
+                align-items: center;
+
+                .value {
+                    display: grid;
+                    color: #FFFFFF;
+
+                    label {
+                        font-size: 20px;
+                        line-height: 120%;
+
+                        .old-price {
+                            font-weight: 700;
+                            text-decoration: line-through;
+                        }
+                    }
+
+                    .new-price {
+                        font-weight: 700;
+                        line-height: 130%;
+                        font-size: 36px;
+                    }
+                }
+
+                .tag-popular {
+                    background-color: #2F80ED;
+                    font-size: 12px;
+                }
+            }
+
+            .button {
+                margin-left: 5%;
+                margin-top: 24px;
+            }
+        }
+    }
+}

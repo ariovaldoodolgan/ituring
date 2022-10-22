@@ -1,0 +1,86 @@
+#carouselteacher {
+    padding: 26px 0;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+
+    header {
+
+        .title {
+            margin-bottom: 40px;
+        }
+    }
+
+    &-custom {
+        margin-bottom: 32px!important;
+
+        .carousel__prev,
+        .carousel__next {
+            background: #58C2AD;
+            box-shadow: 0px 4px 4px rgba(125, 125, 125, 0.25);
+
+            &.carousel__prev--in-active,
+            &.carousel__next--in-active {
+                display: none;
+            }
+        }
+
+        .carousel__slide {
+            align-items: baseline;
+        }
+
+        .carousel__item {
+            display: grid;
+
+            &-photo {
+                margin: 0 auto 21px;
+                height: 210px;
+            }
+
+            &-name {
+                margin-bottom: 21px;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 120%;
+                color: #0F1726;
+            }
+
+            &-observation1,
+            &-observation2 {
+                font-size: 14px;
+                line-height: 214%;
+                letter-spacing: -0.015em;
+                color: #4F4F4F;
+                font-family: 'Montserrat';
+                margin: 0 auto;
+                max-width: 96%;
+            }
+
+            &-observation2 {
+                margin-bottom: 21px;
+                min-height: 29.95px;
+            }
+
+            #circular-button {
+                margin: 0 auto;
+
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .carousel__pagination {
+            margin-top: 20px;
+
+            &-button {
+                width: 8px;
+                height: 8px;
+                background-color: #33CDAC70;
+
+                &--active {
+                    background-color: #33CDAC;
+                }
+            }
+        }
+    }
+}

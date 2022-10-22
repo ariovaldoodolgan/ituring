@@ -1,0 +1,103 @@
+#primary-button {
+    background-color: #33CDAC;
+    border: 1px solid #33CDAC;
+
+    label {
+        color: #FFFFFF
+    }
+}
+
+#outline-button {
+    background-color: #FFFFFF;
+    border: 1px solid #0F1726;
+
+    label {
+        color: #0F1726;
+    }
+}
+
+#primary-button,
+#outline-button {
+    border-radius: 6px;
+    padding: 11px 40px;
+
+    &.medium {
+        padding-top: 14px;
+        padding-bottom: 14px;
+
+        label {
+            font-size: 14px;
+        }
+    }
+
+    label {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-right: 8px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &:hover {
+        opacity: 0.85;
+        cursor: pointer;
+    }
+}
+
+.color-brand-one {
+    background-color: #4B628B!important;
+    border: 1px solid #4B628B!important;
+}
+
+.large {
+    padding-right: 81px!important;
+    padding-left: 81px!important;
+
+    label {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%
+    }
+}
+
+.medium-normal {
+    padding: 2.5px 24px!important;
+
+    label {
+        font-size: 12px;
+        line-height: 187%;
+    }
+}
+
+
+#circular-button {
+    background-color: #605A5A;
+    box-shadow: 0px 4px 4px rgba(125, 125, 125, 0.25);
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    border: none;
+
+    i {
+        color: #FFFFFF;
+    }
+
+    &:hover {
+        opacity: 0.85;
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
