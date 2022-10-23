@@ -9,6 +9,11 @@ const router = createRouter({
 			component: () => import('@/views/Home.vue')
 		},
 		{
+			path: '/for-companies',
+			name: 'Eleve o conhecimento da sua equipe',
+			component: () => import('@/views/B2B.vue')
+		},
+		{
 			path: '/analise-dados-negocios',
 			name: 'Análise de Dados para Negócios',
 			component: () => import('@/views/AnaliseDadosNegocios.vue')
