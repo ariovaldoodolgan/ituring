@@ -365,7 +365,7 @@
 </template>
 
 <script lang="ts">
-import { ref, onBeforeMount } from 'vue';
+import { ref, onBeforeMount } from "vue";
 import Tag from "../components/Tag.vue";
 import Card from "../components/Card.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
@@ -375,10 +375,10 @@ import ContactExpert from "../components/ContactExpert.vue";
 import CarouselStudent from "../components/CarouselStudent.vue";
 import CarouselTeacher from "../components/CarouselTeacher.vue";
 import Moustache from "../components/Moustache.vue";
-import { generalStore } from '../stores/general';
+import { generalStore } from "../store/general";
 import B2BCard from "../components/B2BCard.vue";
 import Countdown from "../components/Countdown.vue";
-import { PushDataLayer } from '../common/utils/GTMEvents';
+import { PushDataLayer } from "../helpers/utils/GTMEvents";
 
 export default {
     components: { 
@@ -391,80 +391,80 @@ export default {
         const isMobile = ref(false);
         const general = generalStore();
 
-        let launchDate = new Date('3 October 2022');
+        let launchDate = new Date("3 October 2022");
 
         let teacherList = [
             {
                 id: 1,
-                photoName: new URL('../assets/images/jo-souza.png', import.meta.url),
-                name: 'Jô Souza',
-                observation1: 'Consultora de desenvolvimento - ThoughtWorks',
+                photoName: new URL("../assets/images/jo-souza.png", import.meta.url),
+                name: "Jô Souza",
+                observation1: "Consultora de desenvolvimento - ThoughtWorks",
                 observation2: null,
-                linkedin: ''
+                linkedin: ""
             },
             {
                 id: 2,
-                photoName: new URL('../assets/images/tiago-sestari.png', import.meta.url),
-                name: 'Tiago Sestari',
-                observation1: 'Engenheiro de Integração - ESW',
+                photoName: new URL("../assets/images/tiago-sestari.png", import.meta.url),
+                name: "Tiago Sestari",
+                observation1: "Engenheiro de Integração - ESW",
                 observation2: null,
-                linkedin: ''
+                linkedin: ""
             },
             {
                 id: 3,
-                photoName: new URL('../assets/images/thales-carvalho.png', import.meta.url),
-                name: 'Thales Carvalho',
-                observation1: 'Head de Produto e Engenharia - ituring',
+                photoName: new URL("../assets/images/thales-carvalho.png", import.meta.url),
+                name: "Thales Carvalho",
+                observation1: "Head de Produto e Engenharia - ituring",
                 observation2: null,
-                linkedin: ''
+                linkedin: ""
             }
         ];
 
         let studentList = [
             {
                 id: 1,
-                photoName: new URL('../assets/images/marcio-oliveira.png', import.meta.url),
-                name: 'Marcio Oliveira',
+                photoName: new URL("../assets/images/marcio-oliveira.png", import.meta.url),
+                name: "Marcio Oliveira",
                 companyRole: null,
                 course: null,
                 review: `Gostei muito de ter feito essa imersão. As aulas foram super didáticas e a pedagogia é 
                 emancipadora: o passo a passo das atividades, mesmo sendo detalhadas, não era dado de mão beijada, 
                 mas de um jeito que o aluno se tornasse protagonista na aprendizagem. O material é muito bom, bela 
-                apresentação e conteúdo. Parabéns a todos do instituto.\"`
+                apresentação e conteúdo. Parabéns a todos do instituto."`
             },
             {
                 id: 2,
-                photoName: new URL('../assets/images/mariana-minotti.png', import.meta.url),
-                name: 'Mariana Minotti',
+                photoName: new URL("../assets/images/mariana-minotti.png", import.meta.url),
+                name: "Mariana Minotti",
                 companyRole: null,
                 course: null,
                 review: `Agradeço de coração à toda a equipe do ituring por disponibilizar esse conteúdo de qualidade 
                 de forma gratuita. Já havia tentado aprender programação, mas fazer isso sozinha é um caminho um pouco 
                 mais tortuoso. Ter voltado a estudar com as atividades propostas e as aulas pelo zoom foi muito 
                 importante para eu poder mostrar pra mim mesma o quanto é possível aprender programação, mesmo sem ter 
-                uma formação na área.\"`
+                uma formação na área."`
             },
             {
                 id: 3,
-                photoName: new URL('../assets/images/luiza-costa.png', import.meta.url),
-                name: 'Luiza Costa',
+                photoName: new URL("../assets/images/luiza-costa.png", import.meta.url),
+                name: "Luiza Costa",
                 companyRole: null,
                 course: null,
                 review: `Esse curso foi uma abertura imensa para perceber que programação era realmente para mim. 
                 Passados os 5 dias, meu entusiasmo pela programação aumentou muito, e de fato é essa profissão que 
                 quero para minha vida. Obrigada, equipe do ituring, certamente, quando eu estiver ingressada na 
-                carreira, lembrarei de que foram vocês que me deram esse empurrão para começar!\"`
+                carreira, lembrarei de que foram vocês que me deram esse empurrão para começar!"`
             },
             {
                 id: 4,
-                photoName: new URL('../assets/images/fernanda-fittipaldi.png', import.meta.url),
-                name: 'Fernanda Fittipaldi',
+                photoName: new URL("../assets/images/fernanda-fittipaldi.png", import.meta.url),
+                name: "Fernanda Fittipaldi",
                 companyRole: null,
                 course: null,
                 review: `O curso em si está sendo um diferencial na minha carreira. A didática do curso é muito boa, 
                 os instrutores sabem facilitar o difícil, o que torna tudo mais agradável, nos gerando a vontade de 
                 fazermos o curso completo e a esperança de nos tornarmos futuros programadores, conforme eles nos 
-                ensinam que realmente é possível dia a dia.\"`
+                ensinam que realmente é possível dia a dia."`
             }
         ];
 
@@ -475,7 +475,7 @@ export default {
         const isOpenCourseModules = ref([false, false, false, false]);
         const collapsesModules = [
             { 
-                title: 'Dia 1: Primeiros passos e preparando a caixa de ferramentas',
+                title: "Dia 1: Primeiros passos e preparando a caixa de ferramentas",
                 content: `Entenda como é o mercado de tecnologia e saiba qual é a mentalidade certa para iniciar 
                 uma carreira em programação. Acredite na sua capacidade e comece preparando a caixa de ferramentas 
                 para sua jornada como pessoa programadora.`,
@@ -483,7 +483,7 @@ export default {
                 hasProject: false
             },
             { 
-                title: 'Dia 2 e 3: Aprendendo a programar e adquirindo o hábito com git',
+                title: "Dia 2 e 3: Aprendendo a programar e adquirindo o hábito com git",
                 content: `Domine os fundamentos que existem em todo e qualquer software do planeta! De comandos, 
                 variáveis, condições a laços de repetição. Entenda por que devemos escrever código para pessoas e 
                 não para o computador. Conheça o GitHub e saiba como usá-lo para potencializar sua carreira em programação.`,
@@ -491,14 +491,14 @@ export default {
                 hasProject: false
             },
             {
-                title: 'Dia 4: Conhecendo o mundo da web com HTML + CSS + JavaScript',
+                title: "Dia 4: Conhecendo o mundo da web com HTML + CSS + JavaScript",
                 content: `Coloque a mão na massa para resolver problemas que você vai encontrar no mundo real. Entenda 
                 o que está por trás da internet e aprenda a construir páginas web com HTML, CSS e JavaScript.`,
                 details: [],
                 hasProject: false
             },
             {
-                title: 'Dia 5: Seus próximos passos como pessoa programadora',
+                title: "Dia 5: Seus próximos passos como pessoa programadora",
                 content: `Finalize sua aplicação web com um deploy na nuvem, confira dicas valiosas e próximos passos 
                 para sua carreira de sucesso em desenvolvimento de software. Mostre o seu trabalho com o GitHub e o 
                 LinkedIn!`,
@@ -509,72 +509,72 @@ export default {
 
         const collapsesFAQ = [
             {
-                question: 'Para quem é este curso?',
+                question: "Para quem é este curso?",
                 answer: `Este curso é para todas as pessoas que têm interesse em aprender programação ou desejam 
                 começar uma carreira na área, mas não sabem como dar o primeiro passo. É um curso para começar a 
                 entender algumas linguagens de programação, as práticas por trás do desenvolvimento de software e 
                 as oportunidades que essa área oferece.`
             },
             {
-                question: 'Quais são os pré-requisitos?',
-                answer: 'Este curso não possui pré-requisitos.'
+                question: "Quais são os pré-requisitos?",
+                answer: "Este curso não possui pré-requisitos."
             }
-        ]
+        ];
 
         const logoCompanies = [
             {
-                img: new URL('../assets/images/nubank.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/nubank.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/quinto-andar.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/quinto-andar.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/kovi.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/kovi.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/confitec.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/confitec.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/stefanini.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/stefanini.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/cyrela.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/cyrela.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/havan.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/havan.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/xp-inc.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/xp-inc.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/rethink.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/rethink.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/take-blip.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/take-blip.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/rd-station.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/rd-station.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/sebrae.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/sebrae.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/burguer-king.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/burguer-king.png", import.meta.url),
+                description: ""
             }
-        ]
+        ];
 
         const vimeoOptions = {
             autoplay: true,
@@ -583,24 +583,24 @@ export default {
             title: false,
             byline: false,
             controls: false
-        }
+        };
 
         function GTMViewItem() {
 
             window.dataLayer.push({ ecommerce: null });
 
             const item = {
-                item_id: 'DEV2901',
-                item_name: 'Aprenda a Programar',
-                item_brand: 'ituring',
-                item_category: 'Developers',
-                item_variant: '5 dias',
+                item_id: "DEV2901",
+                item_name: "Aprenda a Programar",
+                item_brand: "ituring",
+                item_category: "Developers",
+                item_variant: "5 dias",
                 index: 1,
                 price: 0,
                 quantity: 1
             };
 
-            PushDataLayer(item, 'view_item');
+            PushDataLayer(item, "view_item");
         }
 
         return {
@@ -613,7 +613,7 @@ export default {
             launchDate,
             teacherList,
             studentList
-        }
+        };
     }
-}
+};
 </script>

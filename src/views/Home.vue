@@ -167,81 +167,7 @@
 			</div>
 		</section>
 
-		<section id="schools" class="container">
-			<div class="row row-title">
-				<span class="title">Nossas escolas</span>
-			</div>
-
-			<div class="row row-card">
-				<Card class="programming">
-					<template #header>
-                        <label><i class="ri-terminal-box-line"></i>Programação</label>
-                    </template>
-
-					<template #info>
-                        Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
-						to help land a high-paying tech job. 
-                    </template>
-
-					<template #btn>
-						<button id="primary-button">
-							<label><i class="ri-honour-line"></i>Acessar escola de programação</label>
-						</button>
-					</template>
-				</Card>
-
-				<Card class="business">
-					<template #header>
-                        <label><i class="ri-book-line"></i>Negócios</label>
-                    </template>
-
-					<template #info>
-                        Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
-						to help land a high-paying tech job. 
-                    </template>
-
-					<template #btn>
-						<button id="primary-button">
-							<label><i class="ri-honour-line"></i>Acessar escola de negócios</label>
-						</button>
-					</template>
-				</Card>
-
-				<Card class="data">
-					<template #header>
-                        <label><i class="ri-database-2-line"></i>Ciência de Dados</label>
-                    </template>
-
-					<template #info>
-                        Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
-						to help land a high-paying tech job. 
-                    </template>
-
-					<template #btn>
-						<button id="primary-button">
-							<label><i class="ri-honour-line"></i>Acessar escola de dados</label>
-						</button>
-					</template>
-				</Card>
-
-				<Card class="cybersecurity">
-					<template #header>
-                        <label><i class="ri-rotate-lock-line"></i>Cibersegurança</label>
-                    </template>
-
-					<template #info>
-                        Enroll in ITuring today and, for as few as 10 hours a week, you can get the in-demand skills you need 
-						to help land a high-paying tech job. 
-                    </template>
-
-					<template #btn>
-						<button id="primary-button">
-							<label><i class="ri-honour-line"></i>Acessar escola de cibersegurança</label>
-						</button>
-					</template>
-				</Card>
-			</div>
-		</section>
+		<Schools />
 
 		<div class="dots-divider">
             <img src="@/assets/images/dots_2.png" alt="">
@@ -254,49 +180,71 @@
 		<MenuFooter />
 
 		<ITuringRights />
-  	</div>
+	</div>
 </template>
 
 <script lang="ts">
-import Card from '../components/Card.vue';
-import StudentsCompany from '../components/StudentsCompany.vue';
-import ContactExpert from '../components/ContactExpert.vue';
-import MenuHeader from '../components/MenuHeader.vue';
-import MenuFooter from '../components/MenuFooter.vue';
-import ITuringRights from '../components/ITuringRights.vue';
+import { ref, onBeforeMount } from "vue";
+import { generalStore } from "../store/general";
+import Card from "../components/Card.vue";
+import StudentsCompany from "../components/StudentsCompany.vue";
+import ContactExpert from "../components/ContactExpert.vue";
+import MenuHeader from "../components/MenuHeader.vue";
+import MenuFooter from "../components/MenuFooter.vue";
+import ITuringRights from "../components/ITuringRights.vue";
+import Schools from "../components/Schools.vue";
 
 export default {
-  components: {
-	Card, StudentsCompany, ContactExpert,
-    MenuHeader, MenuFooter, ITuringRights
-  },
-  setup() {
-	  const partnerLogoList = [
-		  {
-			  logo: new URL('../assets/images/microsoft-gray.png', import.meta.url),
-			  name: 'Microsoft'
-		  },
-		  {
-			  logo: new URL('../assets/images/loft-gray.png', import.meta.url),
-			  name: 'Loft'
-		  },
-		  {
-			  logo: new URL('../assets/images/refactory-gray.png', import.meta.url),
-			  name: 'Refactory'
-		  },
-		  {
-			  logo: new URL('../assets/images/aws-gray.png', import.meta.url),
-			  name: 'AWS'
-		  },
-		  {
-			  logo: new URL('../assets/images/cisco-gray.png', import.meta.url),
-			  name: 'Cisco'
-		  }
-	  ];
+    components: {
+        Card, StudentsCompany, ContactExpert,
+        MenuHeader, MenuFooter, Schools,
+        ITuringRights
+    },
+    setup() {
+        const isMobile = ref(false);
+        const general = generalStore();
+
+        onBeforeMount(() => {
+            isMobile.value = general.isMobileResolution;
+        });
+
+		const vimeoOptions = {
+            autoplay: true,
+            muted: true,
+            loop: true,
+            title: false,
+            byline: false,
+            controls: false
+        }
+
+        const partnerLogoList = [
+            {
+                logo: new URL("../assets/images/microsoft-gray.png", import.meta.url),
+                name: "Microsoft"
+            },
+            {
+                logo: new URL("../assets/images/loft-gray.png", import.meta.url),
+                name: "Loft"
+            },
+            {
+                logo: new URL("../assets/images/refactory-gray.png", import.meta.url),
+                name: "Refactory"
+            },
+            {
+                logo: new URL("../assets/images/aws-gray.png", import.meta.url),
+                name: "AWS"
+            },
+            {
+                logo: new URL("../assets/images/cisco-gray.png", import.meta.url),
+                name: "Cisco"
+            }
+        ];
 	
-	return {
-		partnerLogoList
-	};
-  }
+        return {
+            partnerLogoList,
+            isMobile,
+			vimeoOptions
+        };
+    }
 };
 </script>

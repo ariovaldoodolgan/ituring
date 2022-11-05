@@ -410,7 +410,7 @@ import ContactExpert from "../components/ContactExpert.vue";
 import CarouselStudent from "../components/CarouselStudent.vue";
 import CarouselTeacher from "../components/CarouselTeacher.vue";
 import Moustache from "../components/Moustache.vue";
-import { generalStore } from '../stores/general';
+import { generalStore } from '../store/general';
 import B2BCard from "../components/B2BCard.vue";
 import Countdown from "../components/Countdown.vue";
 

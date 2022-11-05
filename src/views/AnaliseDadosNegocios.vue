@@ -400,17 +400,17 @@
 </template>
 
 <script lang="ts">
-import { ref, onBeforeMount } from 'vue';
+import { ref, onBeforeMount } from "vue";
 import Tag from "../components/Tag.vue";
 import Card from "../components/Card.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
 import MenuFooter from "../components/MenuFooter.vue";
-import ITuringRights from '../components/ITuringRights.vue';
+import ITuringRights from "../components/ITuringRights.vue";
 import ContactExpert from "../components/ContactExpert.vue";
 import CarouselStudent from "../components/CarouselStudent.vue";
 import CarouselTeacher from "../components/CarouselTeacher.vue";
 import Moustache from "../components/Moustache.vue";
-import { generalStore } from '../stores/general';
+import { generalStore } from "../store/general";
 import B2BCard from "../components/B2BCard.vue";
 import Countdown from "../components/Countdown.vue";
 
@@ -424,7 +424,7 @@ export default {
     setup() {
         const isMobile = ref(false);
         const general = generalStore();
-        let launchDate = new Date('30 September 2022');
+        let launchDate = new Date("30 September 2022");
 
         onBeforeMount(() => {
             isMobile.value = general.isMobileResolution;
@@ -433,116 +433,116 @@ export default {
         const isOpenCourseModules = ref([false, false, false, false]);
         let collapsesModules = [
             { 
-                title: 'Módulo 1 - Introdução à Segurança da Informação',
-                content: 'Conheça os conceitos gerais de segurança da informação e quais os processos e tecnologias que podem auxiliar os negócios na mitigação de riscos cibernéticos.',
+                title: "Módulo 1 - Introdução à Segurança da Informação",
+                content: "Conheça os conceitos gerais de segurança da informação e quais os processos e tecnologias que podem auxiliar os negócios na mitigação de riscos cibernéticos.",
                 details: [
-                    'Introduction: What is Data Security',
-                    'Cybersecurity: Technological Perspective',
-                    'Conceitos gerais e o impacto de cibersegurança para os negócios'
+                    "Introduction: What is Data Security",
+                    "Cybersecurity: Technological Perspective",
+                    "Conceitos gerais e o impacto de cibersegurança para os negócios"
                 ],
                 hasProject: false
             },
             { 
-                title: 'Módulo 2 - Governança, Risco e Compliance',
-                content: 'Compreenda o conjunto de boas práticas e frameworks que têm a finalidade de mitigar riscos associados à cibersegurança e particularidades para atingir a conformidade com as leis.',
+                title: "Módulo 2 - Governança, Risco e Compliance",
+                content: "Compreenda o conjunto de boas práticas e frameworks que têm a finalidade de mitigar riscos associados à cibersegurança e particularidades para atingir a conformidade com as leis.",
                 details: [
-                    'Regulation',
-                    'Big-Data, AI and Legal Liability',
-                    'Governança, Frameworks e Gestão de Riscos'
+                    "Regulation",
+                    "Big-Data, AI and Legal Liability",
+                    "Governança, Frameworks e Gestão de Riscos"
                 ],
                 hasProject: false
             },
             {
-                title: 'Módulo 3 - Privacidade e Aspectos Legais',
-                content: 'Aprofunde-se nos aspectos legais que determinam como proceder em casos de incidentes cibernéticos e vazamentos de dados.',
+                title: "Módulo 3 - Privacidade e Aspectos Legais",
+                content: "Aprofunde-se nos aspectos legais que determinam como proceder em casos de incidentes cibernéticos e vazamentos de dados.",
                 details: [
-                    'Cybersecurity and Privacy',
-                    'Cybersecurity and Criminal Law',
-                    'Legislação Brasileira e o Ecossistema de Comunicação'
+                    "Cybersecurity and Privacy",
+                    "Cybersecurity and Criminal Law",
+                    "Legislação Brasileira e o Ecossistema de Comunicação"
                 ],
                 hasProject: true,
-                projectDescription: 'PROJETO: Localizando, comunicando e mitigando riscos.' 
+                projectDescription: "PROJETO: Localizando, comunicando e mitigando riscos." 
             },
             {
-                title: 'Módulo 4 - Resposta a Incidentes e Resiliência de Negócios',
-                content: 'Entenda os frameworks de resposta a incidentes e preservação da continuidade de seu negócio durante crises.',
+                title: "Módulo 4 - Resposta a Incidentes e Resiliência de Negócios",
+                content: "Entenda os frameworks de resposta a incidentes e preservação da continuidade de seu negócio durante crises.",
                 details: [
-                    'Ransomware: Seeking an Optimal Response Ex Ante and Post',
-                    'Data Breach Notification: Law, Policy & Theory',
-                    'Gestão de Resposta a Incidentes e Frameworks de Continuidade de Negócios'
+                    "Ransomware: Seeking an Optimal Response Ex Ante and Post",
+                    "Data Breach Notification: Law, Policy & Theory",
+                    "Gestão de Resposta a Incidentes e Frameworks de Continuidade de Negócios"
                 ],
                 hasProject: true,
-                projectDescription: 'PROJETO: Escolha uma situação e planeje sua resposta à ameaça.'
+                projectDescription: "PROJETO: Escolha uma situação e planeje sua resposta à ameaça."
             }
         ];
 
         const collapsesFAQ = [
             {
-                question: 'Para quem é este curso?',
+                question: "Para quem é este curso?",
                 answer: `Voltado para profissionais de dados ou negócios, de qualquer segmento, que querem compreender melhor os
                         riscos cibernéticos e aprender técnicas de prevenção e reação à ameaças. Este curso é ideal para quem deseja dominar 
                         tais habilidades, incluindo também análises de cases e perspectivas tecnológicas.`
             },
             {
-                question: 'Quais são os pré-requisitos?',
-                answer: 'Este curso não possui pré-requisitos.'
+                question: "Quais são os pré-requisitos?",
+                answer: "Este curso não possui pré-requisitos."
             }
-        ]
+        ];
 
         const logoCompanies = [
             {
-                img: new URL('../assets/images/nubank.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/nubank.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/quinto-andar.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/quinto-andar.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/kovi.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/kovi.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/confitec.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/confitec.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/stefanini.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/stefanini.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/cyrela.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/cyrela.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/havan.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/havan.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/xp-inc.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/xp-inc.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/rethink.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/rethink.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/take-blip.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/take-blip.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/rd-station.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/rd-station.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/sebrae.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/sebrae.png", import.meta.url),
+                description: ""
             },
             {
-                img: new URL('../assets/images/burguer-king.png', import.meta.url),
-                description: ''
+                img: new URL("../assets/images/burguer-king.png", import.meta.url),
+                description: ""
             }
-        ]
+        ];
 
         const vimeoOptions = {
             autoplay: true,
@@ -551,7 +551,7 @@ export default {
             title: false,
             byline: false,
             controls: false
-        }
+        };
 
         return {
             isOpenCourseModules,
@@ -561,7 +561,7 @@ export default {
             logoCompanies,
             isMobile,
             launchDate
-        }
+        };
     }
-}
+};
 </script>
