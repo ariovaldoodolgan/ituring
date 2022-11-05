@@ -10,7 +10,7 @@
     ],
     "overrides": [
     ],
-    "parser": "@typescript-eslint/parser",
+    "parser": "vue-eslint-parser",
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
@@ -22,7 +22,7 @@
     "rules": {
         "indent": [
             "error",
-            "tab"
+            "tabs"
         ],
         "linebreak-style": [
             "error",
@@ -30,7 +30,7 @@
         ],
         "quotes": [
             "error",
-            "single"
+            "double"
         ],
         "semi": [
             "error",

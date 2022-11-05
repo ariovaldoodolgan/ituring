@@ -180,51 +180,71 @@
 		<MenuFooter />
 
 		<ITuringRights />
-  	</div>
+	</div>
 </template>
 
 <script lang="ts">
-import Card from '../components/Card.vue';
-import StudentsCompany from '../components/StudentsCompany.vue';
-import ContactExpert from '../components/ContactExpert.vue';
-import MenuHeader from '../components/MenuHeader.vue';
-import MenuFooter from '../components/MenuFooter.vue';
-import ITuringRights from '../components/ITuringRights.vue';
-import Schools from '../components/Schools.vue';
+import { ref, onBeforeMount } from "vue";
+import { generalStore } from "../store/general";
+import Card from "../components/Card.vue";
+import StudentsCompany from "../components/StudentsCompany.vue";
+import ContactExpert from "../components/ContactExpert.vue";
+import MenuHeader from "../components/MenuHeader.vue";
+import MenuFooter from "../components/MenuFooter.vue";
+import ITuringRights from "../components/ITuringRights.vue";
+import Schools from "../components/Schools.vue";
 
 export default {
-  components: {
-	Card, StudentsCompany, ContactExpert,
-    MenuHeader, MenuFooter, Schools,
-	ITuringRights
-  },
-  setup() {
-	  const partnerLogoList = [
-		  {
-			  logo: new URL('../assets/images/microsoft-gray.png', import.meta.url),
-			  name: 'Microsoft'
-		  },
-		  {
-			  logo: new URL('../assets/images/loft-gray.png', import.meta.url),
-			  name: 'Loft'
-		  },
-		  {
-			  logo: new URL('../assets/images/refactory-gray.png', import.meta.url),
-			  name: 'Refactory'
-		  },
-		  {
-			  logo: new URL('../assets/images/aws-gray.png', import.meta.url),
-			  name: 'AWS'
-		  },
-		  {
-			  logo: new URL('../assets/images/cisco-gray.png', import.meta.url),
-			  name: 'Cisco'
-		  }
-	  ];
+    components: {
+        Card, StudentsCompany, ContactExpert,
+        MenuHeader, MenuFooter, Schools,
+        ITuringRights
+    },
+    setup() {
+        const isMobile = ref(false);
+        const general = generalStore();
+
+        onBeforeMount(() => {
+            isMobile.value = general.isMobileResolution;
+        });
+
+		const vimeoOptions = {
+            autoplay: true,
+            muted: true,
+            loop: true,
+            title: false,
+            byline: false,
+            controls: false
+        }
+
+        const partnerLogoList = [
+            {
+                logo: new URL("../assets/images/microsoft-gray.png", import.meta.url),
+                name: "Microsoft"
+            },
+            {
+                logo: new URL("../assets/images/loft-gray.png", import.meta.url),
+                name: "Loft"
+            },
+            {
+                logo: new URL("../assets/images/refactory-gray.png", import.meta.url),
+                name: "Refactory"
+            },
+            {
+                logo: new URL("../assets/images/aws-gray.png", import.meta.url),
+                name: "AWS"
+            },
+            {
+                logo: new URL("../assets/images/cisco-gray.png", import.meta.url),
+                name: "Cisco"
+            }
+        ];
 	
-	return {
-		partnerLogoList
-	};
-  }
+        return {
+            partnerLogoList,
+            isMobile,
+			vimeoOptions
+        };
+    }
 };
 </script>

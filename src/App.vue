@@ -1,26 +1,30 @@
 <template>
-	<RouterView :to="{ name: 'home' }"></RouterView>
+  <Home />
 </template>
 
 <script lang="ts">
+import Home from "./views/Home.vue";
 import { onBeforeMount } from "vue";
-import { generalStore } from "./stores/general";
+import { generalStore } from "./store/general";
 
 export default {
-	setup() {
-    	onBeforeMount(() => {
-    	  	const store = generalStore();
+    components: {
+        Home: Home,
+    },
+    setup() {
+        onBeforeMount(() => {
+            const store = generalStore();
 
-    	  	var isMobile = detectarMobile();
+            const isMobile = detectarMobile();
 
-    	  	if (isMobile) {
-    	    	store.updateResolutionDefinition();
-    	  	}
-    	});
+            if (isMobile) {
+                store.updateResolutionDefinition();
+            }
+        });
 
-    	function detectarMobile() {
-			return screen.width < 830;
-    	}
-  	},
+        function detectarMobile() {
+            return screen.width < 830;
+        }
+    },
 };
 </script>

@@ -66,7 +66,7 @@ const router = createRouter({
 		{
 			path: '/cursos',
 			name: 'Catálogo de cursos',
-			component: () => import('@/views/Cursos.vue')
+			component: () => import('@/views/CursosList.vue')
 		}
 	]
 });

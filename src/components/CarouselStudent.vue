@@ -31,13 +31,15 @@
 </template>
 
 <script lang="ts">
-import { ref, onBeforeMount } from 'vue';
-import { generalStore } from '../stores/general';
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
-import 'vue3-carousel/dist/carousel.css';
+import { ref, onBeforeMount } from "vue";
+import { generalStore } from "../store/general";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import "vue3-carousel/dist/carousel.css";
 
 export default {
-    props: ['studentList'],
+    props: {
+        studentList: []
+    },
     components: {
         Carousel, Slide,
         Pagination, Navigation,
@@ -45,6 +47,7 @@ export default {
     setup(props) {
         const isMobile = ref(false);
         const general = generalStore();
+        // eslint-disable-next-line vue/no-setup-props-destructure
         const studentList = props.studentList;
 
         onBeforeMount(() => {
@@ -53,17 +56,17 @@ export default {
         
         let settings = {
             itemsToShow: 1,
-            snapAlign: 'center',
+            snapAlign: "center",
         };
         let breakpoints = {
-          700: {
-            itemsToShow: 1,
-            snapAlign: 'center',
-          },
-          1024: {
-            itemsToShow: 2,
-            snapAlign: 'start',
-          },
+            700: {
+                itemsToShow: 1,
+                snapAlign: "center",
+            },
+            1024: {
+                itemsToShow: 2,
+                snapAlign: "start",
+            },
         };
 
         return {
@@ -71,7 +74,7 @@ export default {
             breakpoints,
             isMobile,
             studentList
-        }
+        };
     }    
-}
+};
 </script>

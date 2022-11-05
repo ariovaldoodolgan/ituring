@@ -56,7 +56,7 @@
 </template>
 <script lang="ts">
 import { ref, onBeforeMount } from 'vue';
-import { generalStore } from '../stores/general';
+import { generalStore } from '../store/general';
 
 export default {
     setup() {

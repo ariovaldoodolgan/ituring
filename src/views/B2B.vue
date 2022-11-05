@@ -4,26 +4,26 @@
     <section id="introduction" class="container business">
         <div class="row">
 			<div class="text col-7">
-    			<div class="title">
-    	  			<span>
-    	    			Desenvolva talentos digitais para a sua empresa.
-    	  			</span>
-    			</div>
-    			<div class="subtitle">
-    	  			<span>
-    	    			Enroll in ITuring today and, for as few as 10 hours a week
-    	  			</span>
-    			</div>
-    			<div class="buttons">
-    	  			<button id="outline-button">
-    	    			<label><i class="ri-honour-line"></i>Conheça mais</label>
-    	  			</button>
-    			</div>
+				<div class="title">
+					<span>
+						Desenvolva talentos digitais para a sua empresa.
+					</span>
+				</div>
+				<div class="subtitle">
+					<span>
+						Enroll in ITuring today and, for as few as 10 hours a week
+					</span>
+				</div>
+				<div class="buttons">
+					<button id="outline-button">
+						<label><i class="ri-honour-line"></i>Conheça mais</label>
+					</button>
+				</div>
 			</div>
 			<div class="col-4">
 				<img class="computer" src="../assets/images/computer.png" alt="Marca d'água ituring">
 			</div>
-    	</div>
+		</div>
     </section>
 
     <section id="partners" class="business">
@@ -32,11 +32,11 @@
                 <span class="col-8">
                     Empresas que confiam no ITuring para desenvolvimento de talentos digitais
                 </span>
-			    <ul class="col-4">
-			    	<li v-for="(item, index) in partnerLogoList" :key="index">
-			    		<img :src="item.logo" :alt="item.name">
-			    	</li>
-			    </ul>
+				<ul class="col-4">
+					<li v-for="(item, index) in partnerLogoList" :key="index">
+						<img :src="item.logo" :alt="item.name">
+					</li>
+				</ul>
             </div>
 		</div>
 	</section>
@@ -106,13 +106,13 @@
                 </template>
 
                 <template #header>
-    	            <label>Samsung Ocean</label>
-    	        </template>
+					<label>Samsung Ocean</label>
+				</template>
 	
 				<template #info>
-    	            Projeto de criação de talentos digitais que dominam tecnologias específicas e demandadas 
+					Projeto de criação de talentos digitais que dominam tecnologias específicas e demandadas 
                     pela Samsumg. Mais de 200 pessoas preparadas para desafios de tecnologia na empresa.
-    	        </template>
+				</template>
             </Partner>
 
             <Partner>
@@ -121,13 +121,13 @@
                 </template>
 
                 <template #header>
-    	            <label>Poli-USP</label>
-    	        </template>
+					<label>Poli-USP</label>
+				</template>
 	
 				<template #info>
-    	            Junto com a Poli-USP o ITuring fez a capacitação e preparação de 70 talentos na área de 
+					Junto com a Poli-USP o ITuring fez a capacitação e preparação de 70 talentos na área de 
                     Engenharia de Software para atuação na Didi.
-    	        </template>
+				</template>
             </Partner>
         </div>
     </section>
@@ -210,32 +210,32 @@
         <div class="cards row">
             <DataCard>
 				<template #header>
-    	            <label>45%<i class="ri-arrow-right-up-line"></i></label>
-    	        </template>
+					<label>45%<i class="ri-arrow-right-up-line"></i></label>
+				</template>
 	
 				<template #info>
-    	            Crescimento da área de tecnologia aumentou em 45% nos últimos 5 anos. 
-    	        </template>
+					Crescimento da área de tecnologia aumentou em 45% nos últimos 5 anos. 
+				</template>
 			</DataCard>
 
             <DataCard>
 				<template #header>
-    	            <label>45M<i class="ri-pie-chart-line"></i></label>
-    	        </template>
+					<label>45M<i class="ri-pie-chart-line"></i></label>
+				</template>
 	
 				<template #info>
-    	            Crescimento da área de tecnologia aumentou em 45% nos últimos 5 anos.
-    	        </template>
+					Crescimento da área de tecnologia aumentou em 45% nos últimos 5 anos.
+				</template>
 			</DataCard>
 
             <DataCard>
 				<template #header>
-    	            <label>112.4<i class="ri-arrow-right-up-line"></i></label>
-    	        </template>
+					<label>112.4<i class="ri-arrow-right-up-line"></i></label>
+				</template>
 	
 				<template #info>
-    	            Crescimento da área de tecnologia aumentou em 45% nos últimos 5 anos.
-    	        </template>
+					Crescimento da área de tecnologia aumentou em 45% nos últimos 5 anos.
+				</template>
 			</DataCard>
         </div>
     </section>
@@ -252,13 +252,13 @@
 </template>
 
 <script lang="ts">
-import MenuHeader from '../components/MenuHeader.vue';
-import Partner from '../components/Partner.vue';
-import Schools from '../components/Schools.vue';
-import DataCard from '../components/DataCard.vue';
-import ContactExpert from '../components/ContactExpert.vue';
-import MenuFooter from '../components/MenuFooter.vue';
-import ITuringRights from '../components/ITuringRights.vue';
+import MenuHeader from "../components/MenuHeader.vue";
+import Partner from "../components/Partner.vue";
+import Schools from "../components/Schools.vue";
+import DataCard from "../components/DataCard.vue";
+import ContactExpert from "../components/ContactExpert.vue";
+import MenuFooter from "../components/MenuFooter.vue";
+import ITuringRights from "../components/ITuringRights.vue";
 
 export default {
     components: { 
@@ -266,32 +266,32 @@ export default {
         ContactExpert, MenuFooter, ITuringRights
     },
     setup() {
-	  const partnerLogoList = [
-		  {
-			  logo: new URL('../assets/images/microsoft-opaco.png', import.meta.url),
-			  name: 'Microsoft'
-		  },
-		  {
-			  logo: new URL('../assets/images/loft-opaco.png', import.meta.url),
-			  name: 'Loft'
-		  },
-		  {
-			  logo: new URL('../assets/images/refactory-opaco.png', import.meta.url),
-			  name: 'Refactory'
-		  },
-		  {
-			  logo: new URL('../assets/images/aws-opaco.png', import.meta.url),
-			  name: 'AWS'
-		  },
-		  {
-			  logo: new URL('../assets/images/cisco-opaco.png', import.meta.url),
-			  name: 'Cisco'
-		  }
-	  ];
+        const partnerLogoList = [
+            {
+                logo: new URL("../assets/images/microsoft-opaco.png", import.meta.url),
+                name: "Microsoft"
+            },
+            {
+                logo: new URL("../assets/images/loft-opaco.png", import.meta.url),
+                name: "Loft"
+            },
+            {
+                logo: new URL("../assets/images/refactory-opaco.png", import.meta.url),
+                name: "Refactory"
+            },
+            {
+                logo: new URL("../assets/images/aws-opaco.png", import.meta.url),
+                name: "AWS"
+            },
+            {
+                logo: new URL("../assets/images/cisco-opaco.png", import.meta.url),
+                name: "Cisco"
+            }
+        ];
 	
-	return {
-		partnerLogoList
-	};
-  }
-}
+        return {
+            partnerLogoList
+        };
+    }
+};
 </script>

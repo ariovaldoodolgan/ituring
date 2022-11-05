@@ -13,27 +13,23 @@ import router from './router';
 
 import './assets/less/main.less';
 
-const app = createApp(App);
-
-app.use(createPinia());
-app.use(router);
-app.use(Select);
-app.use(Option);
-app.use(createVuestic());
-
-app.use(VueSmoothScroll, {
-	duration: 780,
-	updateHistory: false
-});
-app.use(vueVimeoPlayer);
-
-app.use(
-	createGtm({
-		id: 'GTM-MKSSWPT',
-		defer: false,
-		compatibility: false,
-		loadScript: true,
+createApp(App)
+	.use(createPinia())
+	.use(router)
+	.use(Select)
+	.use(Option)
+	.use(createVuestic())
+	.use(VueSmoothScroll, {
+		duration: 780,
+		updateHistory: false
 	})
-);
-
-app.mount('#app');
+	.use(vueVimeoPlayer)
+	.use(
+		createGtm({
+			id: 'GTM-MKSSWPT',
+			defer: false,
+			compatibility: false,
+			loadScript: true,
+		})
+	)
+	.mount('#app');

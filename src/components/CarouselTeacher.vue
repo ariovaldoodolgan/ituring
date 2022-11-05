@@ -26,7 +26,7 @@
 
 <script lang="ts">
 import { ref, onBeforeMount } from 'vue';
-import { generalStore } from '../stores/general';
+import { generalStore } from '../store/general';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 
