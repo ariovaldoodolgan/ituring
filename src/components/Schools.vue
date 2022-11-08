@@ -5,7 +5,7 @@
 		</div>
 
 		<div class="row row-card">
-			<Card class="programming">
+			<card-generic class="programming">
 				<template #header>
     	            <label><i class="ri-terminal-box-line"></i>Programação</label>
     	        </template>
@@ -20,9 +20,9 @@
 						<label><i class="ri-honour-line"></i>Acessar escola de programação</label>
 					</button>
 				</template>
-			</Card>
+			</card-generic>
 	
-			<Card class="business">
+			<card-generic class="business">
 				<template #header>
     	            <label><i class="ri-book-line"></i>Negócios</label>
     	        </template>
@@ -37,9 +37,9 @@
 						<label><i class="ri-honour-line"></i>Acessar escola de negócios</label>
 					</button>
 				</template>
-			</Card>
+			</card-generic>
 
-			<Card class="data">
+			<card-generic class="data">
 				<template #header>
         	        <label><i class="ri-database-2-line"></i>Ciência de Dados</label>
         	    </template>
@@ -54,9 +54,9 @@
 						<label><i class="ri-honour-line"></i>Acessar escola de dados</label>
 					</button>
 				</template>
-			</Card>
+			</card-generic>
 	
-			<Card class="cybersecurity">
+			<card-generic class="cybersecurity">
 				<template #header>
         	        <label><i class="ri-rotate-lock-line"></i>Cibersegurança</label>
         	    </template>
@@ -71,15 +71,15 @@
 						<label><i class="ri-honour-line"></i>Acessar escola de cibersegurança</label>
 					</button>
 				</template>
-			</Card>
+			</card-generic>
 		</div>
 	</section>
 </template>
 
 <script lang="ts">
-import Card from './Card.vue';
+import CardGeneric from './CardGeneric.vue';
 
 export default {
-	components: { Card }
+	components: { CardGeneric }
 }
 </script>

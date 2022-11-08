@@ -194,7 +194,7 @@
 
         <div class="cards container">
             <div class="row">
-                <Card class="col">
+                <card-generic class="col">
                     <template #header>
                         <label><i class="ri-honour-line"></i>Aprenda a Programar</label>
                     </template>
@@ -211,7 +211,7 @@
                             </button>
                         </a>
                     </template>
-                </Card>
+                </card-generic>
                 <div class="other-card col">
                     <i class="ri-honour-line"></i>
                     <span class="title">Online e ao vivo</span>
@@ -367,7 +367,7 @@
 <script lang="ts">
 import { ref, onBeforeMount } from "vue";
 import Tag from "../components/Tag.vue";
-import Card from "../components/Card.vue";
+import CardGeneric from "../components/CardGeneric.vue";
 import MenuHeaderOld from "../components/MenuHeaderOld.vue";
 import MenuFooter from "../components/MenuFooter.vue";
 import ITuringRights from "../components/ITuringRights.vue";
@@ -382,7 +382,7 @@ import { PushDataLayer } from "../helpers/utils/GTMEvents";
 
 export default {
     components: { 
-        Tag, Card, MenuHeaderOld,
+        Tag, CardGeneric, MenuHeaderOld,
         MenuFooter, ITuringRights, ContactExpert, 
         CarouselStudent, CarouselTeacher, Moustache,
         B2BCard, Countdown

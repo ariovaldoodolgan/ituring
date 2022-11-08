@@ -74,7 +74,7 @@
 			</div>
 
 			<div class="row row-card">
-				<Card class="developer">
+				<card-generic class="developer">
 					<template #header>
                         <label><i class="ri-code-box-line"></i>Desenvolvedores</label>
                     </template>
@@ -82,9 +82,9 @@
 					<template #info>
                         4532 desenvolvedores com mais de 90% de satisfação
                     </template>
-				</Card>
+				</card-generic>
 
-				<Card class="beginner">
+				<card-generic class="beginner">
 					<template #header>
                         <label><i class="ri-honour-line"></i>Iniciantes</label>
                     </template>
@@ -92,9 +92,9 @@
 					<template #info>
                         4532 desenvolvedores com mais de 90% de satisfação
                     </template>
-				</Card>
+				</card-generic>
 
-				<Card class="company">
+				<card-generic class="company">
 					<template #header>
                         <label><i class="ri-building-4-line"></i>Empresas</label>
                     </template>
@@ -102,7 +102,7 @@
 					<template #info>
                         4532 desenvolvedores com mais de 90% de satisfação
                     </template>
-				</Card>
+				</card-generic>
 			</div>
 		</section>
 
@@ -186,7 +186,7 @@
 <script lang="ts">
 import { ref, onBeforeMount } from "vue";
 import { generalStore } from "../store/general";
-import Card from "../components/Card.vue";
+import CardGeneric from "../components/CardGeneric.vue";
 import StudentsCompany from "../components/StudentsCompany.vue";
 import ContactExpert from "../components/ContactExpert.vue";
 import MenuHeader from "../components/MenuHeader.vue";
@@ -196,7 +196,7 @@ import Schools from "../components/Schools.vue";
 
 export default {
     components: {
-        Card, StudentsCompany, ContactExpert,
+        CardGeneric, StudentsCompany, ContactExpert,
         MenuHeader, MenuFooter, Schools,
         ITuringRights
     },
